@@ -74,7 +74,7 @@ class ThirdWelcomeState extends State<ThirdWelcome> {
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.brown.shade300,
+                        backgroundColor: Colors.amber.shade100,
                       ),
                       onPressed: () {},
                       child: Text(

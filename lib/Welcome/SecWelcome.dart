@@ -51,7 +51,7 @@ class SecWelcomeState extends State<SecWelcome> {
                   child: Text(
                     'HEALTHIFY',
                     style: TextStyle(
-                      color: Colors.brown.shade300,
+                      color: Colors.amber.shade100,
                       fontSize: 30.0,
                       fontWeight: FontWeight.bold,
 
@@ -93,7 +93,7 @@ class SecWelcomeState extends State<SecWelcome> {
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.brown.shade300,
+                        backgroundColor: Colors.amber.shade100,
                       ),
                       onPressed: () {},
                       child: Text(

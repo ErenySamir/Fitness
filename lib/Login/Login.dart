@@ -128,6 +128,7 @@ class LogInState extends State<LogIn> {
                                 color: Colors.blue.shade900,
                                 width: 2,
                               ),
+                              borderRadius: BorderRadius.all(Radius.circular(20)),
                             ),
                             filled: true,
                             fillColor: Colors.white,
@@ -171,6 +172,8 @@ class LogInState extends State<LogIn> {
                                 color: Colors.blue.shade900,
                                 width: 2,
                               ),
+                              borderRadius: BorderRadius.all(Radius.circular(20)),
+
                             ),
                             filled: true,
                             fillColor: Colors.white,
@@ -211,7 +214,7 @@ class LogInState extends State<LogIn> {
                             padding: const EdgeInsets.all(8.0),
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.brown.shade300,
+                                backgroundColor: Colors.amber.shade100,
                               ),
                               onPressed: () {},
                               child: Text(
