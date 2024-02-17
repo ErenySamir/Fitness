@@ -306,9 +306,11 @@ class HomeState extends State<Home> {
                                 color: Colors.grey.shade800,
                                 height: 30,
                                 child: Padding(
-                                  padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+                                  padding:
+                                      const EdgeInsets.fromLTRB(10, 20, 10, 20),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       SizedBox(),
                                       Text(
@@ -352,9 +354,11 @@ class HomeState extends State<Home> {
                                 color: Colors.grey.shade800,
                                 height: 30,
                                 child: Padding(
-                                  padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+                                  padding:
+                                      const EdgeInsets.fromLTRB(10, 20, 10, 20),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       SizedBox(),
                                       Text(
@@ -402,9 +406,11 @@ class HomeState extends State<Home> {
                                 color: Colors.grey.shade800,
                                 height: 30,
                                 child: Padding(
-                                  padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+                                  padding:
+                                      const EdgeInsets.fromLTRB(10, 20, 10, 20),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       SizedBox(),
                                       Text(
@@ -449,7 +455,6 @@ class HomeState extends State<Home> {
                                           ),
                                         ),
                                       )
-
                                     ],
                                   ),
                                 ),
@@ -462,8 +467,248 @@ class HomeState extends State<Home> {
                   ),
                 ],
               ),
+              //Wooooooork Prooooooooooogressssssssssssss
+              Center(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Workout Progress",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.amber.shade100,
+                                ),
+                                child: Text(
+                                  'Learn More',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width: 600,
+                          height: 140,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                          ),
+                          child: Image.asset(
+                            'assets/images/Work.jpg',
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Text(
+                      "Latest Workout ",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const SizedBox(height: 20),
+                          Container(
+                            width: 60,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.asset(
+                              'assets/images/moon.jpg',
+                            ),
+                          ),
+
+
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "LowerBody Workout",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "200 Calories Burn | 30 min",
+                                  style: TextStyle(
+                                    color: Colors.white38,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: Colors.amber.shade100,
+                                width: 1.0,
+                              ),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.navigate_next,
+                                color: Colors.amber.shade100,
+                                size: 20.0,
+                              ),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const SizedBox(height: 20),
+                          Container(
+                            width: 60,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.asset(
+                              'assets/images/moon.jpg',
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "ab Workout",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "180 Calories Burn | 20 min",
+                                  style: TextStyle(
+                                    color: Colors.white38,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: Colors.amber.shade100,
+                                width: 1.0,
+                              ),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.navigate_next,
+                                color: Colors.amber.shade100,
+                                size: 20.0,
+                              ),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const SizedBox(height: 20),
+                          Container(
+                            width: 60,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: Image.asset(
+                              'assets/images/moon.jpg',
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  "Fullbody Workout",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "180 Calories Burn | 20 min",
+                                  style: TextStyle(
+                                    color: Colors.white38,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: Colors.amber.shade100,
+                                width: 1.0,
+                              ),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                Icons.navigate_next,
+                                color: Colors.amber.shade100,
+                                size: 20.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),                  ],
+                ),
+              ),
             ],
-          ),        ]),
+          ),
+        ]),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
