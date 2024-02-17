@@ -1,3 +1,4 @@
+import 'package:fitness/Profile/Home.dart';
 import 'package:fitness/Login/LogIn.dart';
 import 'package:fitness/Login/Register.dart';
 import 'package:fitness/UserInformation/ActivityLevel.dart';
@@ -14,7 +15,7 @@ void main() {
   runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: ActivityLevel(),
+        home: Home(),
       )
   );
 }
