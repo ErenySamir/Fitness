@@ -85,7 +85,7 @@ class NotificationsState extends State<Notifications> {
                               shape: BoxShape.rectangle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/first.png',
                             ),
                           ),
                           Expanded(
@@ -136,7 +136,7 @@ class NotificationsState extends State<Notifications> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/sec.png',
                             ),
                           ),
                           Expanded(
@@ -187,7 +187,7 @@ class NotificationsState extends State<Notifications> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/three.png',
                             ),
                           ),
                           Expanded(
@@ -230,7 +230,7 @@ class NotificationsState extends State<Notifications> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/four.png',
                             ),
                           ),
                           Expanded(
@@ -281,7 +281,7 @@ class NotificationsState extends State<Notifications> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/five.png',
                             ),
                           ),
                           Expanded(
@@ -332,7 +332,7 @@ class NotificationsState extends State<Notifications> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/six.png',
                             ),
                           ),
                           Expanded(
@@ -383,7 +383,7 @@ class NotificationsState extends State<Notifications> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/seven.png',
                             ),
                           ),
                           Expanded(
@@ -434,7 +434,7 @@ class NotificationsState extends State<Notifications> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/eight.png',
                             ),
                           ),
                           Expanded(

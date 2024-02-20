@@ -536,7 +536,7 @@ class HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/fullbody.png',
                             ),
                           ),
 
@@ -598,7 +598,7 @@ class HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/lower.png',
                             ),
                           ),
                           Expanded(
@@ -658,7 +658,7 @@ class HomeState extends State<Home> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/moon.jpg',
+                              'assets/images/ab.png',
                             ),
                           ),
                           Expanded(

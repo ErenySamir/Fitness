@@ -7,6 +7,7 @@ import 'package:fitness/UserInformation/UserGender.dart';
 import 'package:fitness/UserInformation/UserGoal.dart';
 import 'package:fitness/Welcome/FirstWelcome.dart';
 import 'package:fitness/Welcome/ThirdWelcome.dart';
+import 'package:fitness/WorkOut/WorkoutTracker.dart';
 import 'package:flutter/material.dart';
 
 import 'Login/Splash.dart';
@@ -17,7 +18,7 @@ void main() {
   runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Discover(),
+        home: WorkoutTracker(),
       )
   );
 }
