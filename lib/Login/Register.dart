@@ -73,7 +73,7 @@ class UserRegisterState extends State<UserRegister> {
             SizedBox(
               width: 250,
               child: Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.only(top: 88.0,bottom: 22),
                 child: Center(
                   child: Text(
                     'Hey There,',
@@ -100,9 +100,8 @@ class UserRegisterState extends State<UserRegister> {
                 ),
               ),
             ),
-            SizedBox(
-              width: 500,
-              child: Padding(
+
+              Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: TextField(
                   textAlign: TextAlign.start,
@@ -114,7 +113,7 @@ class UserRegisterState extends State<UserRegister> {
                   // First name
                   decoration: InputDecoration(
                     hintText: 'First Name',
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: Icon(Icons.person,color: Colors.grey,size: 18,),
                     contentPadding: EdgeInsets.symmetric(
                       vertical: 20,
                       horizontal: 20,
@@ -134,10 +133,9 @@ class UserRegisterState extends State<UserRegister> {
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              width: 500,
-              child: Padding(
+
+
+               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: TextField(
                   textAlign: TextAlign.start,
@@ -149,7 +147,7 @@ class UserRegisterState extends State<UserRegister> {
                   // Last name
                   decoration: InputDecoration(
                     hintText: 'Last Name',
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: Icon(Icons.person,color: Colors.grey,size: 18,),
                     contentPadding: EdgeInsets.symmetric(
                       vertical: 20,
                       horizontal: 20,
@@ -169,139 +167,177 @@ class UserRegisterState extends State<UserRegister> {
                   ),
                 ),
               ),
-            ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  textAlign: TextAlign.start,
-                  onChanged: (value) {
-                    setState(() {
-                      Email = value;
-                      validateEmail(value);
-                    });
-                  },
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    prefixIcon: Icon(Icons.email),
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: 20,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blue.shade900,
-                        width: 2,
+
+
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextFormField(
+                          textAlign: TextAlign.start,
+                          onChanged: (value) {
+                            setState(() {
+                              Email = value;
+                              validateEmail(value);
+                            });
+                          },
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(
+                            hintText: 'Email',
+                            prefixIcon: Icon(Icons.email,color: Colors.grey,size: 18,),
+                            contentPadding: EdgeInsets.symmetric(
+                              vertical: 20,
+                              horizontal: 20,
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(20)),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.blue.shade900,
+                                width: 2,
+                              ),
+                              borderRadius: BorderRadius.all(Radius.circular(20)),
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                          ),
+                        ),
                       ),
                     ),
-                    filled: true,
-                    fillColor: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-            if (emailErrorText.isNotEmpty)
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  emailErrorText,
-                  style: TextStyle(fontSize: 8, color: Colors.red),
-                ),
-              ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  textAlign: TextAlign.start,
-                  onChanged: (value) {
-                    setState(() {
-                      password = value;
-                      validatePassword(value);
-                    });
-                  },
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                    prefixIcon: Icon(Icons.lock),
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: 20,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blue.shade900,
-                        width: 2,
+                    if (emailErrorText.isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          emailErrorText,
+                          style: TextStyle(fontSize: 8, color: Colors.red),
+                        ),
+                      ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextFormField(
+                          textAlign: TextAlign.start,
+                          onChanged: (value) {
+                            setState(() {
+                              password = value;
+                              validatePassword(value);
+                            });
+                          },
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            hintText: 'Password',
+                            prefixIcon: Icon(Icons.lock,color: Colors.grey,size: 18,),
+                            contentPadding: EdgeInsets.symmetric(
+                              vertical: 20,
+                              horizontal: 20,
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(20)),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.blue.shade900,
+                                width: 2,
+                              ),
+                              borderRadius: BorderRadius.all(Radius.circular(20)),
+
+                            ),
+                            filled: true,
+                            fillColor: Colors.white,
+                          ),
+                        ),
                       ),
                     ),
-                    filled: true,
-                    fillColor: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-            Row(
-              children: <Widget>[
-                SizedBox(
-                  width: 10,
-                ),
-                Center(
-                  child: Checkbox(
-                    value: this.value,
-                    onChanged: (value) {
-                      setState(() {
-                        this.value = value!;
-                      });
-                    },
-                  ),
-                ),
-                Text(
-                  'By Continuing you accept our Privacy Policy and Term of Use. ',
-                  style: TextStyle(fontSize: 10.0, color: Colors.white),
-                ), //Text
-                SizedBox(width: 10), //SizedBox
-              ],
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                alignment: Alignment.bottomCenter,
-                child: SizedBox(
-                  width: 315,
-                  height: 60,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.amber.shade100,
-                      ),
-                      onPressed: () {},
+                    Center(
                       child: Text(
-                        'Register',
-                        style: TextStyle(color: Colors.black),
+                        'Forget your Password ?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
+                    if (passwordErrorText.isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          passwordErrorText,
+                          style: TextStyle(fontSize: 8, color: Colors.red),
+                        ),
+                      ),
+                    SizedBox(
+                      height: 10,
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 551.0),
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          alignment: Alignment.bottomCenter,
+                          child: SizedBox(
+                            width: 315,
+                            height: 60,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.amber.shade100,
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  'Register',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children:[
+                            Center(
+                              child: Text(
+                                'Already have an account?  ',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.normal,
+                                ),
+                              ),
+                            ),
+
+                            Text(
+                              ' Login ',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.amber.shade100,
+                                fontSize: 15,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            ),
+                          ]
+                      ),
+                    )
+                  ],
                 ),
               ),
             ),
-            Center(
-              child: Text(
-                'Already Have an Account ?   Log In',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.normal,
-                ),
-              ),
-            ),
+
           ],
         ),
       ),

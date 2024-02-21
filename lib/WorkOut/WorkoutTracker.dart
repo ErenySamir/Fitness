@@ -653,6 +653,7 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
             label: "",
             backgroundColor: Colors.black,
           ),
+          //when click on this icon btn sheet show
           BottomNavigationBarItem(
             icon: Icon(Icons.fitness_center_sharp),
             label: "",
