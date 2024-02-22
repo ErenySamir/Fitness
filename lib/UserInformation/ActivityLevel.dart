@@ -62,7 +62,9 @@ class ActivityLevelState extends State<ActivityLevel> {
                         duration: Duration(milliseconds: 300),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          color: selectedOption == 'Beginner' ? Colors.amber.shade100 : Colors.grey.shade800,
+                          color: selectedOption == 'Beginner' ? Colors.amber.shade100 :
+                           Color(0xFF35383F),
+
                         ),
                         child: TextButton(
                           onPressed: () {
@@ -96,8 +98,10 @@ class ActivityLevelState extends State<ActivityLevel> {
                         duration: Duration(milliseconds: 300),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          color: selectedOption == 'Intermediate' ? Colors.amber.shade100 : Colors.grey.shade800,
-                        ),
+                          color: selectedOption == 'Intermediate' ? Colors.amber.shade100 :
+                           Color(0xFF35383F),
+
+                      ),
                         child: TextButton(
                           onPressed: () {
                             setState(() {
@@ -114,7 +118,9 @@ class ActivityLevelState extends State<ActivityLevel> {
                               child: Text(
                                 'Intermediate',
                                 style: TextStyle(
-                                  color: selectedOption == 'Intermediate' ? Colors.grey : Colors.white,
+                                  color: selectedOption == 'Intermediate' ?
+                                 Color(0xFF35383F)
+                                  : Colors.white,
                                 ),
                               ),
                             ),
@@ -169,8 +175,9 @@ class ActivityLevelState extends State<ActivityLevel> {
                     height: 50,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black12,
-                      ),
+                        backgroundColor:                           Color(0xFF35383F),
+
+                    ),
                       onPressed: () {},
                       child: Text(
                         'B A C K',

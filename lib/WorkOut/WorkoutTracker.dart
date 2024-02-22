@@ -53,7 +53,7 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                             width: 900,
                             height: 80,
                             child: Container(
-                              color: Colors.grey.shade700,
+                              color: Color(0xFF35383F),
                               height: 300,
                               child: Padding(
                                 padding:
@@ -342,7 +342,7 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                         padding: const EdgeInsets.all(12.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.grey.shade800,
+                            color: Color(0xFF35383F),
                             borderRadius: BorderRadius.circular(30.0),
                             shape: BoxShape.rectangle,),
                           child: Padding(
@@ -413,7 +413,7 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                         padding: const EdgeInsets.all(12.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.grey.shade800,
+                            color: Color(0xFF35383F),
                             borderRadius: BorderRadius.circular(30.0),
                             shape: BoxShape.rectangle,),
                           child: Padding(

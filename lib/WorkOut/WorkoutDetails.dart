@@ -152,7 +152,7 @@ class WorkoutDetailsState extends State<WorkoutDetails> {
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.grey.shade800,
+                            color: Color(0xFF35383F),
                             borderRadius: BorderRadius.circular(30.0),
                             shape: BoxShape.rectangle,
                           ),

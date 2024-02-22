@@ -72,7 +72,7 @@ class UserGoalState extends State<UserGoal> {
                                   : Colors.black,
                               width: 2,
                             ),
-                            color: Colors.grey.shade800,
+                            color: Color(0xFF35383F),
                           ),
                           child: RadioListTile<String>(
                             title: Text(
@@ -114,7 +114,7 @@ class UserGoalState extends State<UserGoal> {
                                   : Colors.black,
                               width: 2,
                             ),
-                            color: Colors.grey.shade800,
+                            color: Color(0xFF35383F),
                           ),
                           child: RadioListTile<String>(
                             title: Text(
@@ -156,7 +156,7 @@ class UserGoalState extends State<UserGoal> {
                                   : Colors.black,
                               width: 2,
                             ),
-                            color: Colors.grey.shade800,
+                            color: Color(0xFF35383F),
                           ),
                           child: RadioListTile<String>(
                             title: Text(
@@ -192,7 +192,7 @@ class UserGoalState extends State<UserGoal> {
                       height: 50,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.black12,
+                          backgroundColor: Color(0xFF35383F),
                         ),
                         onPressed: () {},
                         child: Text(

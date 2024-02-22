@@ -19,20 +19,19 @@ class ComparisonState extends State<Comparison> {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
-                height: 60.0,
                 color: Colors.black12,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(top: 38.0),
+                      padding: const EdgeInsets.all( 15.0),
                       child: Container(
                         width: 40.0,
                         height: 40.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
                           shape: BoxShape.rectangle,
-                          color: Colors.grey.shade900,
+                          color: Color(0xFF35383F),
                         ),
                         child: IconButton(
                           icon: Icon(Icons.navigate_before),
@@ -57,7 +56,7 @@ class ComparisonState extends State<Comparison> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         shape: BoxShape.rectangle,
-                        color: Colors.grey.shade900,
+                        color: Color(0xFF35383F),
                       ),
                       child: IconButton(
                         icon: Icon(Icons.more_horiz),
@@ -78,7 +77,7 @@ class ComparisonState extends State<Comparison> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade800,
+                          color: Color(0xFF35383F),
                           borderRadius: BorderRadius.circular(30.0),
                           shape: BoxShape.rectangle,
                         ),
@@ -120,7 +119,7 @@ class ComparisonState extends State<Comparison> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade800,
+                          color: Color(0xFF35383F),
                           borderRadius: BorderRadius.circular(30.0),
                           shape: BoxShape.rectangle,
                         ),

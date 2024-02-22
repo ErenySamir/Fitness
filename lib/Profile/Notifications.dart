@@ -30,7 +30,7 @@ class NotificationsState extends State<Notifications> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         shape: BoxShape.rectangle,
-                        color: Colors.grey,
+                        color: Color(0xFF35383F),
                       ),
                       child: IconButton(
                         icon: Icon(Icons.navigate_before),
@@ -54,7 +54,7 @@ class NotificationsState extends State<Notifications> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         shape: BoxShape.rectangle,
-                        color: Colors.grey,
+                        color: Color(0xFF35383F),
                       ),
                       child: IconButton(
                         icon: Icon(Icons.more_horiz),
@@ -123,6 +123,10 @@ class NotificationsState extends State<Notifications> {
                         ],
                       ),
                     ),
+                    Divider(
+                      color: Colors.white,
+                      thickness: 1, // Adjust the thickness as per your requirement
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -174,6 +178,10 @@ class NotificationsState extends State<Notifications> {
                         ],
                       ),
                     ),
+                    Divider(
+                      color: Colors.white,
+                      thickness: 1, // Adjust the thickness as per your requirement
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -216,6 +224,10 @@ class NotificationsState extends State<Notifications> {
                           ),
                         ],
                       ),
+                    ),
+                    Divider(
+                      color: Colors.white,
+                      thickness: 1, // Adjust the thickness as per your requirement
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -268,6 +280,10 @@ class NotificationsState extends State<Notifications> {
                         ],
                       ),
                     ),
+                    Divider(
+                      color: Colors.white,
+                      thickness: 1, // Adjust the thickness as per your requirement
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -318,6 +334,10 @@ class NotificationsState extends State<Notifications> {
                           ),
                         ],
                       ),
+                    ),
+                    Divider(
+                      color: Colors.white,
+                      thickness: 1, // Adjust the thickness as per your requirement
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -370,6 +390,10 @@ class NotificationsState extends State<Notifications> {
                         ],
                       ),
                     ),
+                    Divider(
+                      color: Colors.white,
+                      thickness: 1, // Adjust the thickness as per your requirement
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -420,6 +444,10 @@ class NotificationsState extends State<Notifications> {
                           ),
                         ],
                       ),
+                    ),
+                    Divider(
+                      color: Colors.white,
+                      thickness: 1, // Adjust the thickness as per your requirement
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),

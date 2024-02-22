@@ -32,7 +32,7 @@ class CompareResultState extends State<CompareResult> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
                           shape: BoxShape.rectangle,
-                          color: Colors.grey.shade900,
+                          color: Color(0xFF35383F),
                         ),
                         child: IconButton(
                           icon: Icon(Icons.navigate_before),
@@ -107,7 +107,7 @@ class CompareResultState extends State<CompareResult> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.grey.shade800,
+                          color: Color(0xFF35383F),
                           borderRadius: BorderRadius.circular(30.0),
                           shape: BoxShape.rectangle,
                         ),

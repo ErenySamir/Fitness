@@ -30,7 +30,7 @@ class DiscoverState extends State<Discover> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       shape: BoxShape.rectangle,
-                      color: Colors.grey,
+                      color: Color(0xFF35383F),
                     ),
                     child: IconButton(
                       icon: Icon(Icons.navigate_before),
@@ -46,7 +46,7 @@ class DiscoverState extends State<Discover> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
                       shape: BoxShape.rectangle,
-                      color: Colors.grey,
+                      color: Color(0xFF35383F),
                     ),
                     child: IconButton(
                       icon: Icon(Icons.more_horiz),
@@ -106,7 +106,7 @@ class DiscoverState extends State<Discover> {
                       height: 60,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey.shade700,
+                        color: Color(0xFF35383F),
                       ),
                       child: TextButton(
                         onPressed: () {},
@@ -126,7 +126,7 @@ class DiscoverState extends State<Discover> {
                       height: 60,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey.shade700,
+                        color: Color(0xFF35383F),
                       ),
                       child: TextButton(
                         onPressed: () {},

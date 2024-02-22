@@ -233,7 +233,7 @@ class HomeState extends State<Home> {
                 width: 900,
                 height: 80,
                 child: Container(
-                  color: Colors.grey.shade700,
+                  color: Color(0xFF35383F),
                   height: 300,
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
@@ -303,7 +303,7 @@ class HomeState extends State<Home> {
                               width: 180,
                               height: 500,
                               child: Container(
-                                color: Colors.grey.shade800,
+                                color: Color(0xFF35383F),
                                 height: 30,
                                 child: Padding(
                                   padding:
@@ -351,7 +351,7 @@ class HomeState extends State<Home> {
                               width: 200,
                               height: 200,
                               child: Container(
-                                color: Colors.grey.shade800,
+                                color: Color(0xFF35383F),
                                 height: 30,
                                 child: Padding(
                                   padding:
@@ -403,7 +403,7 @@ class HomeState extends State<Home> {
                               width: 200,
                               height: 200,
                               child: Container(
-                                color: Colors.grey.shade800,
+                                color: Color(0xFF35383F),
                                 height: 30,
                                 child: Padding(
                                   padding:
