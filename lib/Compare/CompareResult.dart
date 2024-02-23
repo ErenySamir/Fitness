@@ -149,7 +149,6 @@ class CompareResultState extends State<CompareResult> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [ Text(

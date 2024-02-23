@@ -296,7 +296,7 @@ class HomeState extends State<Home> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(top: 30.0, bottom: 30),
+                          padding: EdgeInsets.only(top: 2.0, bottom: 2),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: SizedBox(
@@ -304,23 +304,34 @@ class HomeState extends State<Home> {
                               height: 500,
                               child: Container(
                                 color: Color(0xFF35383F),
-                                height: 30,
+                                height: 2,
                                 child: Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(10, 20, 10, 20),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                      const EdgeInsets.fromLTRB(2, 2, 2, 2),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
-                                      SizedBox(),
-                                      Text(
-                                        "Water Intake",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
+                                      Container(
+                                        width: 20,
+                                        height: 310,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.rectangle,
+                                        ),
+                                        child: Image.asset(
+                                          'assets/images/home.png',
                                         ),
                                       ),
+                                      Column(
+                                        children: [
+                                          Text(
+                                            "Water Intake",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+
                                       Text(
                                         "4 Liters",
                                         style: TextStyle(
@@ -328,6 +339,145 @@ class HomeState extends State<Home> {
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold,
                                         ),
+                                      ),
+                                          Text(
+                                            "Real time updates",
+                                            style: TextStyle(
+                                              color: Colors.grey.shade700,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Expanded(
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(2.0),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: <Widget>[
+                                                  Text(
+                                                    "6am - 8am",
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.normal,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "600ml",
+                                                    style: TextStyle(
+                                                      color: Colors.amber.shade100,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          Expanded(
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(2.0),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: <Widget>[
+                                                  Text(
+                                                    "9am - 11am",
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.normal,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "500ml",
+                                                    style: TextStyle(
+                                                      color: Colors.amber.shade100,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          Expanded(
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(2.0),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: <Widget>[
+                                                  Text(
+                                                    "11am - 2pm",
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.normal,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "1000ml",
+                                                    style: TextStyle(
+                                                      color: Colors.amber.shade100,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          Expanded(
+
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: <Widget>[
+                                                  Text(
+                                                    "2pm - 4pm",
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.normal,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "700ml",
+                                                    style: TextStyle(
+                                                      color: Colors.amber.shade100,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+
+                                          Expanded(
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(2.0),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: <Widget>[
+                                                  Text(
+                                                    "4pm - now",
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.normal,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "900ml",
+                                                    style: TextStyle(
+                                                      color: Colors.amber.shade100,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
@@ -475,21 +625,22 @@ class HomeState extends State<Home> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Workout Progress",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
+
+                        Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children:[ Text(
+                            "Workout Progress",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
+
                         const SizedBox(height: 20),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: <Widget>[
-                              ElevatedButton(
+                          child: ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.amber.shade100,
@@ -498,10 +649,9 @@ class HomeState extends State<Home> {
                                   'Learn More',
                                   style: TextStyle(color: Colors.black),
                                 ),
-                              ),
-                            ],
+                             ),
                           ),
-                        ),
+                        ]),
                         Container(
                           width: 600,
                           height: 140,
