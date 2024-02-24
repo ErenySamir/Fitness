@@ -27,17 +27,18 @@ class ThirdWelcomeState extends State<ThirdWelcome> {
             ),
 
             Positioned(
-              top: 460,
-              left: 50,
+              top: 550,
               child: SizedBox(
-                width: 273,
-                height: 46,
+                width: 197,
+                height: 51,
                 child: Center(
                       child: Text(
                         'Training',
+                        textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 40.0,
+                          fontWeight: FontWeight.bold
                         ),
                       ),
                 ),
@@ -45,18 +46,19 @@ class ThirdWelcomeState extends State<ThirdWelcome> {
             ),
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 450),
+                padding: const EdgeInsets.only(top: 500,left: 50,right: 50),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
                       'Workout plans designed to help you '
-                          'achieve your fitness goals - whether losing weight or building muscles',
-                      textAlign: TextAlign.center,
+                          'achieve your fitness goals '
+                          '- whether losing weight or building muscles',
+                      textAlign: TextAlign.start,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w200,
+                        fontSize: 18,
+                        fontWeight: FontWeight.normal,
                       ),
                     ),
                   ],
@@ -71,15 +73,15 @@ class ThirdWelcomeState extends State<ThirdWelcome> {
                   width: 351,
                   height: 66,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(top: 1.0,bottom: 12),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber.shade100,
                       ),
                       onPressed: () {},
                       child: Text(
-                        'GET STARTED',
-                        style: TextStyle(color: Colors.black),
+                        'N E X T',
+                        style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

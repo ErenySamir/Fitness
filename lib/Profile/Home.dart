@@ -13,7 +13,7 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
-  bool isDarkMode = true;
+  bool isDarkMode = false;
   int currentIndexx = 0;
 
 
@@ -22,18 +22,26 @@ class HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
           Padding(
             padding: const EdgeInsets.only(top: 20, left: 5),
-            child: Text(
-              "Welcome Back,",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 15.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Welcome Back,",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
           Padding(
             padding: const EdgeInsets.only(left: 5),
             child: Text(
@@ -60,80 +68,90 @@ class HomeState extends State<Home> {
                 activeTrackColor: Colors.black,
                 inactiveTrackColor: Colors.black,
                 inactiveThumbColor: Colors.black,
-                activeThumbImage: AssetImage('assets/images/ssun.jpg'),
-                inactiveThumbImage: AssetImage('assets/images/moon.jpg'),
+               inactiveThumbImage: AssetImage('assets/images/ssun.jpg'),
+                activeThumbImage : AssetImage('assets/images/moon.jpg'),
               ),
             ),
           ),
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 2.0),
-                child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                  ),
-                  child: Image.asset(
-                    'assets/images/person.jpg',
-                  ),
+                  ],
                 ),
-              ),
-            ],
-          ),
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              SizedBox(width: 10),
-              Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.amber.shade100,
+
+                SizedBox(height: 10),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    SizedBox(height: 10),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 2.0,right: 2),
+                      child: Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/person.png',
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 2.0,left: 2),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          SizedBox(width: 10),
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.amber.shade100,
+                            ),
+                            child: Icon(
+                              Icons.textsms_outlined,
+                              color: Colors.black,
+                              size: 30,
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              shape: BoxShape.rectangle,
+                              color: Colors.amber.shade100,
+                            ),
+                            child: Icon(
+                              Icons.search,
+                              color: Colors.black,
+                              size: 30,
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.amber.shade100,
+                            ),
+                            child: Icon(
+                              Icons.notifications_none,
+                              color: Colors.black,
+                              size: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                  ],
                 ),
-                child: Icon(
-                  Icons.chat_outlined,
-                  color: Colors.black,
-                  size: 30,
-                ),
-              ),
-              SizedBox(width: 10),
-              Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  shape: BoxShape.rectangle,
-                  color: Colors.amber.shade100,
-                ),
-                child: Icon(
-                  Icons.search,
-                  color: Colors.black,
-                  size: 30,
-                ),
-              ),
-              SizedBox(width: 10),
-              Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.amber.shade100,
-                ),
-                child: Icon(
-                  Icons.notifications,
-                  color: Colors.black,
-                  size: 30,
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 10.0),
@@ -141,7 +159,7 @@ class HomeState extends State<Home> {
               borderRadius: BorderRadius.circular(30),
               child: SizedBox(
                 width: 900,
-                height: 200,
+                height: 150,
                 child: Container(
                     color: Colors.amber.shade100,
                     height: 300,
@@ -159,7 +177,7 @@ class HomeState extends State<Home> {
                                   'BMI (Body Mass Index)',
                                   style: TextStyle(
                                       color: Colors.black,
-                                      fontSize: 30,
+                                      fontSize: 22,
                                       fontWeight: FontWeight.bold), //TextStyle
                                 ),
                                 SizedBox(), //SizedBox
@@ -168,7 +186,7 @@ class HomeState extends State<Home> {
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 20,
-                                      fontWeight: FontWeight.bold), //TextStyle
+                                      fontWeight: FontWeight.normal), //TextStyle
                                 ), //Text
                                 SizedBox(),
                                 ElevatedButton(
@@ -242,8 +260,8 @@ class HomeState extends State<Home> {
                           child: const Text(
                             "Today's  Workout",
                             style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
+                                color: Colors.white,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold), //TextStyle
                           ),
                         ), //Text
@@ -274,12 +292,15 @@ class HomeState extends State<Home> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Activity Status",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.only(bottom: 38.0,top: 12),
+                child: Text(
+                  "Activity Status",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               Row(
@@ -289,9 +310,7 @@ class HomeState extends State<Home> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 2.0, bottom: 2),
-                          child: ClipRRect(
+                     ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: SizedBox(
                               width: 180,
@@ -301,7 +320,7 @@ class HomeState extends State<Home> {
                                 height: 2,
                                 child: Padding(
                                   padding:
-                                      const EdgeInsets.fromLTRB(2, 2, 2, 2),
+                                      const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
@@ -317,39 +336,48 @@ class HomeState extends State<Home> {
                                       ),
                                       Column(
                                         children: [
-                                          Text(
-                                            "Water Intake",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.bold,
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              "Water Intake",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                           ),
 
-                                      Text(
-                                        "4 Liters",
-                                        style: TextStyle(
-                                          color: Colors.amber.shade100,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          "4 Liters",
+                                          style: TextStyle(
+                                            color: Colors.amber.shade100,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                          Text(
-                                            "Real time updates",
-                                            style: TextStyle(
-                                              color: Colors.grey.shade700,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.bold,
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              "Real time updates",
+                                              style: TextStyle(
+                                                color: Colors.grey.shade700,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
                                             ),
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: const EdgeInsets.all(2.0),
+                                              padding: const EdgeInsets.all(1.0),
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Text(
-                                                    "6am - 8am",
+                                                    "•  6am - 8am",
                                                     style: TextStyle(
                                                       color: Colors.grey,
                                                       fontSize: 8,
@@ -357,7 +385,7 @@ class HomeState extends State<Home> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    "600ml",
+                                                    "   600ml",
                                                     style: TextStyle(
                                                       color: Colors.amber.shade100,
                                                       fontSize: 8,
@@ -370,12 +398,12 @@ class HomeState extends State<Home> {
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: const EdgeInsets.all(2.0),
+                                              padding: const EdgeInsets.all(1.0),
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Text(
-                                                    "9am - 11am",
+                                                    "•  9am - 11am",
                                                     style: TextStyle(
                                                       color: Colors.grey,
                                                       fontSize: 8,
@@ -383,7 +411,7 @@ class HomeState extends State<Home> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    "500ml",
+                                                    "   500ml",
                                                     style: TextStyle(
                                                       color: Colors.amber.shade100,
                                                       fontSize: 8,
@@ -396,12 +424,12 @@ class HomeState extends State<Home> {
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: const EdgeInsets.all(2.0),
+                                              padding: const EdgeInsets.all(1.0),
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Text(
-                                                    "11am - 2pm",
+                                                    "•  11am - 2pm",
                                                     style: TextStyle(
                                                       color: Colors.grey,
                                                       fontSize: 8,
@@ -409,7 +437,7 @@ class HomeState extends State<Home> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    "1000ml",
+                                                    "   1000ml",
                                                     style: TextStyle(
                                                       color: Colors.amber.shade100,
                                                       fontSize: 8,
@@ -421,30 +449,29 @@ class HomeState extends State<Home> {
                                             ),
                                           ),
                                           Expanded(
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: <Widget>[
+                                                  Text(
+                                                    "•  2pm - 4pm",
+                                                    style: TextStyle(
+                                                      color: Colors.grey,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.normal,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "   700ml",
+                                                    style: TextStyle(
+                                                      color: Colors.amber.shade100,
+                                                      fontSize: 8,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
 
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Text(
-                                                    "2pm - 4pm",
-                                                    style: TextStyle(
-                                                      color: Colors.grey,
-                                                      fontSize: 8,
-                                                      fontWeight: FontWeight.normal,
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    "700ml",
-                                                    style: TextStyle(
-                                                      color: Colors.amber.shade100,
-                                                      fontSize: 8,
-                                                      fontWeight: FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-
                                           Expanded(
                                             child: Padding(
                                               padding: const EdgeInsets.all(2.0),
@@ -452,7 +479,7 @@ class HomeState extends State<Home> {
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Text(
-                                                    "4pm - now",
+                                                    "•  4pm - now",
                                                     style: TextStyle(
                                                       color: Colors.grey,
                                                       fontSize: 8,
@@ -460,7 +487,7 @@ class HomeState extends State<Home> {
                                                     ),
                                                   ),
                                                   Text(
-                                                    "900ml",
+                                                    "   900ml",
                                                     style: TextStyle(
                                                       color: Colors.amber.shade100,
                                                       fontSize: 8,
@@ -479,7 +506,7 @@ class HomeState extends State<Home> {
                               ),
                             ),
                           ),
-                        ),
+
                       ],
                     ),
                   ),

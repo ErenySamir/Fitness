@@ -24,7 +24,7 @@ class UserGenderState extends State<UserGender> {
                   'HEALTHIFY',
                   style: TextStyle(
                     color: Colors.amber.shade100,
-                    fontSize: 30.0,
+                    fontSize: 32.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -35,7 +35,7 @@ class UserGenderState extends State<UserGender> {
                   'Tell Us About Yourself',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 35.0,
+                    fontSize: 30.0,
                     fontWeight: FontWeight.bold
                   ),
                 ),
@@ -58,8 +58,8 @@ class UserGenderState extends State<UserGender> {
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: userGender == 'Male'
-                                ? Colors.brown.shade50
-                                : Colors.amber.shade100,
+                                  ? Colors.amber.shade100
+                              : Color(0xFF35383F)
                           ),
                           child: Icon(
                             Icons.male_rounded,
@@ -72,48 +72,49 @@ class UserGenderState extends State<UserGender> {
                           'Male',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
                     ),
                   ),
                   SizedBox(width: 50),
-                  GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        userGender = 'Female';
-                      });
-                    },
-                    child: Column(
-                      children: [
-                        Container(
-                          width: 80,
-                          height: 80,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: userGender == 'Female'
-                                ? Colors.brown.shade50
-                                : Colors.amber.shade100,
-                          ),
-                          child: Icon(
-                            Icons.female_rounded,
-                            color: Colors.white,
-                            size: 40,
-                          ),
-                        ),
-                        SizedBox(height: 8),
-                        Text(
-                          'Female',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+        GestureDetector(
+          onTap: () {
+            setState(() {
+              userGender = 'Female';
+            });
+          },
+          child: Column(
+            children: [
+              Container(
+                width: 80,
+                height: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: userGender == 'Female'
+                      ? Color(0xFF35383F)
+                      : Colors.amber.shade100,
+                ),
+                child: Icon(
+                  Icons.female_rounded,
+                  color: Colors.white,
+                  size: 40,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Female',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),                ],
               ),
               SizedBox(height: 50),
               Padding(
@@ -134,7 +135,7 @@ class UserGenderState extends State<UserGender> {
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.blue.shade900,
+                        color: Colors.black,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -144,7 +145,7 @@ class UserGenderState extends State<UserGender> {
                   ),
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 40),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
@@ -163,7 +164,7 @@ class UserGenderState extends State<UserGender> {
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.blue.shade900,
+                        color: Colors.black,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -173,7 +174,7 @@ class UserGenderState extends State<UserGender> {
                   ),
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 40),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
@@ -192,7 +193,7 @@ class UserGenderState extends State<UserGender> {
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.blue.shade900,
+                        color: Colors.black,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -202,12 +203,12 @@ class UserGenderState extends State<UserGender> {
                   ),
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 150),
               Container(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
-                  width: 315,
-                  height: 60,
+                  width: 351,
+                  height: 66,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amber.shade100,
@@ -215,7 +216,7 @@ class UserGenderState extends State<UserGender> {
                     onPressed: () {},
                     child: Text(
                       'C O N T I N U E',
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),
                     ),
                   ),
                 ),

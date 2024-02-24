@@ -55,7 +55,7 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                           color: Colors.grey.shade800,
                         ),
                         child: IconButton(
-                          icon: Icon(Icons.cancel_presentation),
+                          icon: Icon(Icons.clear_sharp),
                           color: Colors.white,
                           onPressed: () {
                             // Add your action here for the three dots
@@ -91,7 +91,7 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                     Text("00:15 Shoulder pulses",
                       style: TextStyle(
                       color: Colors.white,
-                      fontSize: 15,
+                      fontSize: 14,
                       fontWeight: FontWeight.normal,
                     ),
                     ),
@@ -113,7 +113,7 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                     Text("Muscles involved: ",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -136,7 +136,7 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                         "How To Do It",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -152,11 +152,11 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
               ),
               //*********************
               Padding(
-                padding: const EdgeInsets.only(top: 30,left: 22.0),
+                padding: const EdgeInsets.only(top: 1,left: 22.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("01 ",
+                    Text("01  •",
                       style: TextStyle(
                         color: Colors.amber.shade100,
                         fontSize: 14,
@@ -178,14 +178,25 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("02  ",
+                    Text("02  •",
                       style: TextStyle(
                         color: Colors.amber.shade100,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(" Raise arms out to side, parallel to floor , palms facing upwards",
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(" Raise arms out to side, ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                    Text(
+                        "parallel to floor , palms facing upwards",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
@@ -194,20 +205,30 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                     ),
                   ],
                 ),
-              ),
+              ]),),
               Padding(
                 padding: const EdgeInsets.only(top: 30,left: 22.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("03  ",
+                    Text("03  •",
                       style: TextStyle(
                         color: Colors.amber.shade100,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(" Slightly raise and lower arms in a controlled and fast pace",
+                    Column(
+                      children: [
+                        Text(" Slightly raise and lower arms ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+
+                    Text("in a controlled and fast pace",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
@@ -216,13 +237,14 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                     ),
                   ],
                 ),
-              ),
+                  ],
+                ),),
               Padding(
                 padding: const EdgeInsets.only(top: 30,left: 22.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("04 ",
+                    Text("04  •",
                       style: TextStyle(
                         color: Colors.amber.shade100,
                         fontSize: 14,
@@ -260,24 +282,24 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("•  Keep good posture with neck long, shoulders back, no slouching",
+                    Text("•  Keep good posture with neck long, shoulders back,   no slouching",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
                     Text("•  Keep arms parallel to the floor",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
-                    Text("•  Raise and lower arms in fast and controlled movements",
+                    Text("•  Raise and lower arms in fast and controlled   movements",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
@@ -294,7 +316,7 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.amber.shade200,
+                        backgroundColor: Colors.amber.shade100,
                       ),
                       child: Text(
                         'Get Ready!',

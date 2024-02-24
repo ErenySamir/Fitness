@@ -18,48 +18,50 @@ class UserGoalState extends State<UserGoal> {
         child: Center(
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-            SizedBox(height: 30),
+            SizedBox(height: 50),
             Center(
               child: Text(
                 'HEALTHIFY',
                 style: TextStyle(
                   color: Colors.amber.shade100,
-                  fontSize: 30.0,
+                  fontSize: 32.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 Center(
                   child: Text(
                     'What Is Your Goal?',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 35.0,
+                        fontSize: 30.0,
                         fontWeight: FontWeight.bold
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 30),
                 Center(
-                  child: Text(
-                    'You can choose more than one. '
-                        'Don’t worry, You can always change it later.',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.bold
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 18.0,left: 18),
+                    child: Text(
+                      textAlign: TextAlign.center,
+                      'You can choose more than one. '
+                          'Don’t worry, You can always change it later.',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold
+                      ),
                     ),
                   ),
                 ),
                 Column(
                   children: [
-                    SizedBox(height: 50),
+                    SizedBox(height: 60),
                     Container(
-                      decoration: BoxDecoration(
-                        // borderRadius: BorderRadius.circular(20),
-                        // color: Colors.grey.shade300,
-                      ),
+                      width: 470,
+                      height: 88,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: AnimatedContainer(
@@ -69,7 +71,7 @@ class UserGoalState extends State<UserGoal> {
                             border: Border.all(
                               color: selectedOption == 'Gain Weight'
                                   ? Colors.amber.shade100
-                                  : Colors.black,
+                                  : Colors.amber.shade100,
                               width: 2,
                             ),
                             color: Color(0xFF35383F),
@@ -88,8 +90,10 @@ class UserGoalState extends State<UserGoal> {
                             onChanged: (value) {
                               setState(() {
                                 selectedOption = value!;
+
                               });
                             },
+                            fillColor: MaterialStateColor.resolveWith((states) => Colors.amber.shade100),
                             activeColor: Colors.amber.shade100,
                             controlAffinity: ListTileControlAffinity.trailing,
                           ),
@@ -98,6 +102,8 @@ class UserGoalState extends State<UserGoal> {
                     ),
                     SizedBox(height: 12),
                     Container(
+                      width: 470,
+                      height: 88,
                       decoration: BoxDecoration(
                         // borderRadius: BorderRadius.circular(20),
                         // color: Colors.grey.shade300,
@@ -140,6 +146,8 @@ class UserGoalState extends State<UserGoal> {
                     ),
                     SizedBox(height: 12),
                     Container(
+                      width: 470,
+                      height: 88,
                       decoration: BoxDecoration(
                         // borderRadius: BorderRadius.circular(20),
                         // color: Colors.grey.shade300,
@@ -153,7 +161,7 @@ class UserGoalState extends State<UserGoal> {
                             border: Border.all(
                               color: selectedOption == 'build_muscles'
                                   ? Colors.amber.shade100
-                                  : Colors.black,
+                                  : Colors.amber.shade100,
                               width: 2,
                             ),
                             color: Color(0xFF35383F),
@@ -174,45 +182,50 @@ class UserGoalState extends State<UserGoal> {
                                 selectedOption = value!;
                               });
                             },
+                            fillColor: MaterialStateColor.resolveWith((states) => Colors.amber.shade100),
                             activeColor: Colors.amber.shade100,
                             controlAffinity: ListTileControlAffinity.trailing,
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 50),
                   ],
                 ),
                 SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SizedBox(
-                      width: 150,
-                      height: 50,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF35383F),
-                        ),
-                        onPressed: () {},
-                        child: Text(
-                          'B A C K',
-                          style: TextStyle(color: Colors.amber.shade100),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12.0,top: 130),
+                      child: SizedBox(
+                        width: 150,
+                        height: 57,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF35383F),
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            'B A C K',
+                            style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),
+                          ),
                         ),
                       ),
                     ),
-                    SizedBox(width: 30),
-                    SizedBox(
-                      width: 150,
-                      height: 50,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.amber.shade100,
-                        ),
-                        onPressed: () {},
-                        child: Text(
-                          'C O N T I N U E',
-                          style: TextStyle(color: Colors.black),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 12.0,top: 130),
+                      child: SizedBox(
+                        width: 210,
+                        height: 57,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.amber.shade100,
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            'C O N T I N U E',
+                            style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),
+                          ),
                         ),
                       ),
                     ),

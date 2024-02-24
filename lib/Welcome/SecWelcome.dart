@@ -26,69 +26,68 @@ class SecWelcomeState extends State<SecWelcome> {
               ),
             ),
             Positioned(
-              top: 430,
+              top: 600,
               child: SizedBox(
                 width: 273,
-                height: 46,
+                height: 50,
                 child: Center(
-                    child: Text(
-                      'WELCOME TO',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30.0,
-                      ),
-
+                  child: Text(
+                    'WELCOME TO',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40.0,
+                    ),
                   ),
                 ),
               ),
             ),
             Positioned(
-              top: 460,
+              top: 630,
               child: SizedBox(
                 width: 273,
-                height: 46,
+                height: 94,
                 child: Center(
                   child: Text(
                     'HEALTHIFY',
                     style: TextStyle(
                       color: Colors.amber.shade100,
-                      fontSize: 30.0,
+                      fontSize: 48.0,
                       fontWeight: FontWeight.bold,
-
                     ),
                   ),
                 ),
               ),
             ),
-
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 450),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'This app provides an interactive experience,'
-                          ' allowing you to log completed workouts,'
-                          ' track your progress, and celebrate your achievements..',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w200,
+                padding: const EdgeInsets.only(top: 640, right: 20, left: 20),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        'This app provides an interactive '
+                            'experience, allowing you to log completed '
+                            'workouts, track your progress,'
+                            ' and celebrate  your achievements..',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.normal,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                alignment: Alignment.bottomCenter,
                 child: SizedBox(
-                  width: 315,
-                  height: 60,
+                  width: 351,
+                  height: 76,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
@@ -98,7 +97,7 @@ class SecWelcomeState extends State<SecWelcome> {
                       onPressed: () {},
                       child: Text(
                         'NEXT',
-                        style: TextStyle(color: Colors.black),
+                        style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

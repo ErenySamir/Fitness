@@ -70,10 +70,11 @@ class UserRegisterState extends State<UserRegister> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+
             SizedBox(
               width: 250,
               child: Padding(
-                padding: const EdgeInsets.only(top: 88.0,bottom: 22),
+                padding: const EdgeInsets.only(top: 58.0),
                 child: Center(
                   child: Text(
                     'Hey There,',
@@ -95,249 +96,266 @@ class UserRegisterState extends State<UserRegister> {
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 26,
+                    fontSize: 20,
                   ),
                 ),
               ),
             ),
-
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: TextField(
-                  textAlign: TextAlign.start,
-                  onChanged: (value) {
-                    setState(() {
-                      enteredName = value; // Update the entered name value
-                    });
-                  },
-                  // First name
-                  decoration: InputDecoration(
-                    hintText: 'First Name',
-                    prefixIcon: Icon(Icons.person,color: Colors.grey,size: 18,),
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: 20,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blue.shade900,
-                        width: 2,
-                      ),
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    filled: true,
-                    fillColor: Colors.white,
-                  ),
-                ),
-              ),
-
-
-               Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: TextField(
-                  textAlign: TextAlign.start,
-                  onChanged: (value) {
-                    setState(() {
-                      enteredName = value; // Update the entered name value
-                    });
-                  },
-                  // Last name
-                  decoration: InputDecoration(
-                    hintText: 'Last Name',
-                    prefixIcon: Icon(Icons.person,color: Colors.grey,size: 18,),
-                    contentPadding: EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: 20,
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.blue.shade900,
-                        width: 2,
-                      ),
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    filled: true,
-                    fillColor: Colors.white,
-                  ),
-                ),
-              ),
-
-
+            SizedBox(
+              height: 20,
+            ),
             Padding(
               padding: const EdgeInsets.all(12.0),
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextFormField(
-                          textAlign: TextAlign.start,
-                          onChanged: (value) {
-                            setState(() {
-                              Email = value;
-                              validateEmail(value);
-                            });
-                          },
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                            hintText: 'Email',
-                            prefixIcon: Icon(Icons.email,color: Colors.grey,size: 18,),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 20,
-                              horizontal: 20,
-                            ),
-                            border: OutlineInputBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(20)),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.blue.shade900,
-                                width: 2,
-                              ),
-                              borderRadius: BorderRadius.all(Radius.circular(20)),
-                            ),
-                            filled: true,
-                            fillColor: Colors.white,
-                          ),
-                        ),
-                      ),
+              child: TextField(
+                textAlign: TextAlign.start,
+                onChanged: (value) {
+                  setState(() {
+                    enteredName = value; // Update the entered name value
+                  });
+                },
+                // First name
+                decoration: InputDecoration(
+                  hintText: 'First Name',
+                  prefixIcon: Icon(
+                    Icons.person_outline_outlined,
+                    color: Colors.grey,
+                    size: 18,
+                  ),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 20,
+                    horizontal: 20,
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.black,
+                      width: 2,
                     ),
-                    if (emailErrorText.isNotEmpty)
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          emailErrorText,
-                          style: TextStyle(fontSize: 8, color: Colors.red),
-                        ),
-                      ),
-                    Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: TextFormField(
-                          textAlign: TextAlign.start,
-                          onChanged: (value) {
-                            setState(() {
-                              password = value;
-                              validatePassword(value);
-                            });
-                          },
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            hintText: 'Password',
-                            prefixIcon: Icon(Icons.lock,color: Colors.grey,size: 18,),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 20,
-                              horizontal: 20,
-                            ),
-                            border: OutlineInputBorder(
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(20)),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.blue.shade900,
-                                width: 2,
-                              ),
-                              borderRadius: BorderRadius.all(Radius.circular(20)),
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: TextField(
+                textAlign: TextAlign.start,
+                onChanged: (value) {
+                  setState(() {
+                    enteredName = value; // Update the entered name value
+                  });
+                },
+                // Last name
+                decoration: InputDecoration(
+                  hintText: 'Last Name',
+                  prefixIcon: Icon(
+                    Icons.person_outline,
+                    color: Colors.grey,
+                    size: 18,
+                  ),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 20,
+                    horizontal: 20,
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.black,
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+              ),
+            ),
 
-                            ),
-                            filled: true,
-                            fillColor: Colors.white,
+            Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        onChanged: (value) {
+                          setState(() {
+                            Email = value;
+                            validateEmail(value);
+                          });
+                        },
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration(
+                          hintText: 'Email',
+                          prefixIcon: Icon(
+                            Icons.email_outlined,
+                            color: Colors.grey,
+                            size: 18,
                           ),
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 20,
+                            horizontal: 20,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.black,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                       ),
                     ),
-                    Center(
-                      child: Text(
-                        'Forget your Password ?',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    if (passwordErrorText.isNotEmpty)
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          passwordErrorText,
-                          style: TextStyle(fontSize: 8, color: Colors.red),
-                        ),
-                      ),
-                    SizedBox(
-                      height: 10,
-                    ),
-
+                  ),
+                  if (emailErrorText.isNotEmpty)
                     Padding(
-                      padding: const EdgeInsets.only(top: 551.0),
-                      child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: Container(
-                          alignment: Alignment.bottomCenter,
-                          child: SizedBox(
-                            width: 315,
-                            height: 60,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.amber.shade100,
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  'Register',
-                                  style: TextStyle(color: Colors.black),
-                                ),
-                              ),
-                            ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        emailErrorText,
+                        style: TextStyle(fontSize: 8, color: Colors.red),
+                      ),
+                    ),
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        onChanged: (value) {
+                          setState(() {
+                            password = value;
+                            validatePassword(value);
+                          });
+                        },
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          prefixIcon: Icon(
+                            Icons.lock_outline,
+                            color: Colors.grey,
+                            size: 18,
                           ),
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 20,
+                            horizontal: 20,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Colors.black,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          ),
+                          filled: true,
+                          fillColor: Colors.white,
                         ),
                       ),
                     ),
-                    Center(
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children:[
-                            Center(
-                              child: Text(
-                                'Already have an account?  ',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              ),
-                            ),
-
-                            Text(
-                              ' Login ',
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.check_box_outline_blank,
+                            color: Colors.white,
+                            size: 18,
+                          ),
+                          Center(
+                            child: Text(
+                              'By continuing you accept our Privacy Policy and Term of Use',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.amber.shade100,
-                                fontSize: 15,
+                                fontSize: 10,
+                                color: Colors.white,
+                              ),
+                            ),
+                          )
+                        ]),
+                  ),
+                  if (passwordErrorText.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        passwordErrorText,
+                        style: TextStyle(fontSize: 8, color: Colors.red),
+                      ),
+                    ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 161.0),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        alignment: Alignment.bottomCenter,
+                        child: SizedBox(
+                          width: 315,
+                          height: 60,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.amber.shade100,
+                              ),
+                              onPressed: () {},
+                              child: Text(
+                                'Register',
+                                style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Center(
+                            child: Text(
+                              'Already have an account?  ',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
                                 fontWeight: FontWeight.normal,
                               ),
                             ),
-                          ]
-                      ),
-                    )
-                  ],
-                ),
+                          ),
+                          Text(
+                            ' Login ',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.amber.shade100,
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ]),
+                  )
+                ],
               ),
             ),
-
           ],
         ),
       ),

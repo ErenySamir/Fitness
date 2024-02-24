@@ -20,13 +20,13 @@ class ActivityLevelState extends State<ActivityLevel> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 30),
+              SizedBox(height: 50),
               Center(
                 child: Text(
                   'HEALTHIFY',
                   style: TextStyle(
                     color: Colors.amber.shade100,
-                    fontSize: 30.0,
+                    fontSize: 32.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -37,18 +37,23 @@ class ActivityLevelState extends State<ActivityLevel> {
                   'Physical Activity Level?',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 35.0,
+                      fontSize: 30.0,
                       fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(height: 20),
               Center(
-                child: Text(
-                  'Choose your regular Activity level this will help us to personalize plane for you.',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.bold),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'Choose your regular Activity level '
+                        'this will help us to personalize plane for you.',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
               Column(
@@ -137,7 +142,9 @@ class ActivityLevelState extends State<ActivityLevel> {
                         duration: Duration(milliseconds: 300),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          color: selectedOption == 'Advanced' ? Colors.amber.shade100 : Colors.grey.shade800,
+                          color: selectedOption == 'Advanced' ? Colors.amber.shade100 :
+                          Color(0xFF35383F),
+
                         ),
                         child: TextButton(
                           onPressed: () {
@@ -155,7 +162,9 @@ class ActivityLevelState extends State<ActivityLevel> {
                             child: Text(
                               'Advanced',
                               style: TextStyle(
-                                color: selectedOption == 'Advanced' ? Colors.grey : Colors.white,
+                                color: selectedOption == 'Advanced' ?
+                                Color(0xFF35383F)
+                                : Colors.white,
                               ),
                             ),
                           ),),
@@ -170,33 +179,37 @@ class ActivityLevelState extends State<ActivityLevel> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(
-                    width: 150,
-                    height: 50,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:                           Color(0xFF35383F),
-
-                    ),
-                      onPressed: () {},
-                      child: Text(
-                        'B A C K',
-                        style: TextStyle(color: Colors.amber.shade100),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12.0,top: 130),
+                    child: SizedBox(
+                      width: 150,
+                      height: 57,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF35383F),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'B A C K',
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),
+                        ),
                       ),
                     ),
                   ),
-                  SizedBox(width: 30),
-                  SizedBox(
-                    width: 150,
-                    height: 50,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.amber.shade100,
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        'C O N T I N U E',
-                        style: TextStyle(color: Colors.black),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 12.0,top: 130),
+                    child: SizedBox(
+                      width: 210,
+                      height: 57,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.amber.shade100,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'C O N T I N U E',
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),
+                        ),
                       ),
                     ),
                   ),

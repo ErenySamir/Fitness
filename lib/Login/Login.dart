@@ -69,7 +69,7 @@ class LogInState extends State<LogIn> {
               SizedBox(
                 width: 250,
                 child: Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: const EdgeInsets.only(top: 58.0),
                   child: Text(
                     'Hey There,',
                     textAlign: TextAlign.center,
@@ -88,12 +88,12 @@ class LogInState extends State<LogIn> {
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 26,
+                    fontSize: 20,
                   ),
                 ),
               ),
               SizedBox(
-                height: 150,
+                height: 50,
               ),
               Form(
                 key: _formKey,
@@ -114,7 +114,7 @@ class LogInState extends State<LogIn> {
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                             hintText: 'Email',
-                            prefixIcon: Icon(Icons.email,color: Colors.grey,size: 18,),
+                            prefixIcon: Icon(Icons.email_outlined,color: Colors.grey,size: 18,),
                             contentPadding: EdgeInsets.symmetric(
                               vertical: 20,
                               horizontal: 20,
@@ -125,7 +125,7 @@ class LogInState extends State<LogIn> {
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Colors.blue.shade900,
+                                color: Colors.black,
                                 width: 2,
                               ),
                               borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -158,7 +158,7 @@ class LogInState extends State<LogIn> {
                           obscureText: true,
                           decoration: InputDecoration(
                             hintText: 'Password',
-                            prefixIcon: Icon(Icons.lock,color: Colors.grey,size: 18,),
+                            prefixIcon: Icon(Icons.lock_outline,color: Colors.grey,size: 18,),
                             contentPadding: EdgeInsets.symmetric(
                               vertical: 20,
                               horizontal: 20,
@@ -169,7 +169,7 @@ class LogInState extends State<LogIn> {
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
-                                color: Colors.blue.shade900,
+                                color: Colors.black,
                                 width: 2,
                               ),
                               borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -181,15 +181,17 @@ class LogInState extends State<LogIn> {
                         ),
                       ),
                     ),
+
                     Center(
                       child: Text(
-                        'Forget your Password ?',
+                        'Forgot your password?',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 12,
                           color: Colors.white,
                         ),
                       ),
+
                     ),
                     if (passwordErrorText.isNotEmpty)
                       Padding(
@@ -204,7 +206,7 @@ class LogInState extends State<LogIn> {
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.only(top: 551.0),
+                      padding: const EdgeInsets.only(top: 161.0),
                       child: Align(
                         alignment: Alignment.bottomCenter,
                         child: Container(
@@ -220,8 +222,8 @@ class LogInState extends State<LogIn> {
                                 ),
                                 onPressed: () {},
                                 child: Text(
-                                  'Login',
-                                  style: TextStyle(color: Colors.black),
+                                  'login',
+                                  style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),
                                 ),
                               ),
                             ),
@@ -235,11 +237,11 @@ class LogInState extends State<LogIn> {
                         children:[
                           Center(
                           child: Text(
-                            'Dont Have an Account Yet?   ',
+                            'Don’t have an account yet?  ',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 15,
+                              fontSize: 14,
                               fontWeight: FontWeight.normal,
                             ),
                           ),
@@ -250,7 +252,7 @@ class LogInState extends State<LogIn> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.amber.shade100,
-                            fontSize: 15,
+                            fontSize: 14,
                             fontWeight: FontWeight.normal,
                           ),
                         ),

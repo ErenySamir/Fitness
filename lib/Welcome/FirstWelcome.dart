@@ -25,18 +25,19 @@ class FirstWelcomeState extends State<FirstWelcome> {
                 alignment: Alignment.center,
               ),
             ),
+
             Positioned(
-              left: 100,
-              top: 50,
+              left: 60,
+              top: 74,
               child: SizedBox(
-                width: 187,
+                width: 290,
                 height: 67,
                   child: Center(
                     child: Text(
                       'HEALTHIFY',
                       style: TextStyle(
                         color: Colors.amber.shade100,
-                        fontSize: 30.0,
+                        fontSize: 48.0,
                         fontWeight: FontWeight.bold,
 
                     ),
@@ -45,19 +46,20 @@ class FirstWelcomeState extends State<FirstWelcome> {
               ),
             ),
             Positioned(
-              top: 150,
-              left: 50,
+              top: 550,
+              left: 60,
               child: SizedBox(
                 width: 273,
-                height: 46,
+                height: 146,
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 2),
+                    padding: const EdgeInsets.only(top:4,bottom: 45),
                     child: Text(
-                      'Lets Move',
+                      'Let’s Move',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 40.0,
+                        fontSize: 52.0,
+                        fontWeight: FontWeight.normal
                       ),
                     ),
                   ),
@@ -66,7 +68,7 @@ class FirstWelcomeState extends State<FirstWelcome> {
             ),
             Center(
               child: Padding(
-                padding: const EdgeInsets.only(top: 450),
+                padding: const EdgeInsets.only(top: 450,right: 65,left: 65),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -75,32 +77,29 @@ class FirstWelcomeState extends State<FirstWelcome> {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w200,
+                        fontSize: 23,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
                 ),
               ),
             ),
-            Align(
-              alignment: Alignment.bottomCenter,
+            Padding(
+              padding: const EdgeInsets.only(top: 740.0,left: 60,right: 60),
               child: Container(
-                alignment: Alignment.bottomCenter,
-                child: SizedBox(
-                  width: 315,
-                  height: 60,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: 315,
+                    height: 60,
                     child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.amber.shade100,
-                      ),
-                      onPressed: () {},
-                      child: Text(
-                        'GET STARTED',
-                        style: TextStyle(color: Colors.black),
-                      ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.amber.shade100,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'G E T   S T A R T E D',
+                          style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 24),
+
                     ),
                   ),
                 ),
