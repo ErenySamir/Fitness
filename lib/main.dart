@@ -10,6 +10,9 @@ import 'package:fitness/Profile/Home.dart';
 import 'package:fitness/Login/LogIn.dart';
 import 'package:fitness/Login/Register.dart';
 import 'package:fitness/Profile/Notifications.dart';
+import 'package:fitness/Profile/Profile.dart';
+import 'package:fitness/Profile/ProfileEdit.dart';
+import 'package:fitness/Profile/ProfilePicture.dart';
 import 'package:fitness/Setting/Alarm.dart';
 import 'package:fitness/Setting/SleepTracker.dart';
 import 'package:fitness/UserInformation/ActivityLevel.dart';
@@ -33,7 +36,7 @@ void main() {
   runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:MealPlanner(),
+        home:Profile(),
       )
   );
 }

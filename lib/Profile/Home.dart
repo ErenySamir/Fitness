@@ -16,12 +16,6 @@ class HomeState extends State<Home> {
   bool isDarkMode = true;
   int currentIndexx = 0;
 
-  final List<Widget> pages = [
-    ProfilePage(),
-    FoodPage(),
-    MoonPage(),
-    HealthPage(),
-  ];
 
   @override
   Widget build(BuildContext context) {
