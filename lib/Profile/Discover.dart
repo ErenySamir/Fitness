@@ -1,3 +1,6 @@
+import 'package:fitness/Meals/MealPlanner.dart';
+import 'package:fitness/Profile/Notifications.dart';
+import 'package:fitness/WorkOut/WorkoutTracker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,12 +35,23 @@ class DiscoverState extends State<Discover> {
                       shape: BoxShape.rectangle,
                       color: Color(0xFF35383F),
                     ),
-                    child: IconButton(
-                      icon: Icon(Icons.navigate_before),
-                      color: Colors.white,
-                      onPressed: () {
-                        // Add your action here for the three dots
+                    child: InkWell(
+                      onTap: () {
+                        setState(() {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Notifications()),
+                          );
+                        });
                       },
+                      child: IconButton(
+                        icon: Icon(Icons.navigate_before),
+                        color: Colors.white,
+                        onPressed: () {
+                          // Add your action here for the three dots
+                        },
+                      ),
                     ),
                   ),
                   Container(
@@ -89,7 +103,12 @@ class DiscoverState extends State<Discover> {
                         color: Colors.white,
                       ),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => WorkoutTracker()),
+                          );
+                        },
                         child: Text(
                           "Workout",
                           style: TextStyle(
@@ -109,7 +128,12 @@ class DiscoverState extends State<Discover> {
                         color: Color(0xFF35383F),
                       ),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => MealPlanner()),
+                          );
+                        },
                         child: Text(
                           "Meal Planner",
                           style: TextStyle(

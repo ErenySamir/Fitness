@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:fitness/Welcome/ThirdWelcome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -94,7 +95,12 @@ class SecWelcomeState extends State<SecWelcome> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber.shade100,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ThirdWelcome()),
+                        );
+                      },
                       child: Text(
                         'NEXT',
                         style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold),

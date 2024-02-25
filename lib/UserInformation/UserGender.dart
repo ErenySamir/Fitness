@@ -1,3 +1,4 @@
+import 'package:fitness/UserInformation/UserGoal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -213,7 +214,12 @@ class UserGenderState extends State<UserGender> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amber.shade100,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => UserGoal()),
+                      );
+                    },
                     child: Text(
                       'C O N T I N U E',
                       style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),

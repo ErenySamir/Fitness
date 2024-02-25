@@ -1,5 +1,8 @@
+import 'package:fitness/UserInformation/UserGoal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../Profile/Home.dart';
 
 class ActivityLevel extends StatefulWidget {
   @override
@@ -188,7 +191,12 @@ class ActivityLevelState extends State<ActivityLevel> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF35383F),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => UserGoal()),
+                          );
+                        },
                         child: Text(
                           'B A C K',
                           style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),
@@ -205,7 +213,12 @@ class ActivityLevelState extends State<ActivityLevel> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.amber.shade100,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Home()),
+                          );
+                        },
                         child: Text(
                           'C O N T I N U E',
                           style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),

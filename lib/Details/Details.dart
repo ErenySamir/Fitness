@@ -1,3 +1,5 @@
+import 'package:fitness/Congrat/Congratulations.dart';
+import 'package:fitness/WorkOut/WorkoutDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,12 +34,23 @@ class DetailsState extends State<Details> {
                           shape: BoxShape.rectangle,
                           color: Colors.grey,
                         ),
-                        child: IconButton(
-                          icon: Icon(Icons.navigate_before),
-                          color: Colors.white,
-                          onPressed: () {
-                            // Add your action here for the three dots
+                        child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => WorkoutDetails()),
+                              );
+                            });
                           },
+                          child: IconButton(
+                            icon: Icon(Icons.navigate_before),
+                            color: Colors.white,
+                            onPressed: () {
+                              // Add your action here for the three dots
+                            },
+                          ),
                         ),
                       ),
                       Text(
@@ -232,7 +245,12 @@ class DetailsState extends State<Details> {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.amber.shade100,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Congratulation()),
+                              );
+                            },
                             child: Text(
                               'Save Results',
                               style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 23),

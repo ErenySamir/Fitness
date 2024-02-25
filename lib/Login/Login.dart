@@ -1,3 +1,5 @@
+import 'package:fitness/Login/Register.dart';
+import 'package:fitness/Welcome/FirstWelcome.dart';
 import 'package:flutter/material.dart';
 
 class LogIn extends StatefulWidget {
@@ -220,7 +222,12 @@ class LogInState extends State<LogIn> {
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.amber.shade100,
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => FirstWelcome()),
+                                  );
+                                },
                                 child: Text(
                                   'login',
                                   style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),
@@ -247,15 +254,27 @@ class LogInState extends State<LogIn> {
                           ),
                         ),
 
-                      Text(
-                          'Register',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.amber.shade100,
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      UserRegister()),
+                            );
+                          });
+                        },
+                        child: Text(
+                            'Register',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.amber.shade100,
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
                           ),
-                        ),
+                      ),
                           ]
                       ),
                     )

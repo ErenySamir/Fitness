@@ -1,3 +1,4 @@
+import 'package:fitness/Profile/Discover.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -25,8 +26,12 @@ class UserProfile extends StatelessWidget {
               ),
               child: IconButton(
                 onPressed: () {
-                  // Handle navigation or back action here
-                },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Discover()),
+                  );
+                  },
                 icon: Icon(Icons.navigate_before),
                 color: Colors.white,
               ),
@@ -34,10 +39,7 @@ class UserProfile extends StatelessWidget {
             SizedBox(width: 16),
             CircleAvatar(
               radius: 24,
-              child: Icon(
-                Icons.person,
-                size: 32,
-              ),
+              child: Image.asset('assets/images/alli.png')
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0),

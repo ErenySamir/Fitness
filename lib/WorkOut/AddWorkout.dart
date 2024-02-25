@@ -48,7 +48,7 @@ class AddWorkoutState extends State<AddWorkout> {
                             color: Color(0xFF35383F),
                           ),
                           child: IconButton(
-                            icon: Icon(Icons.cancel_outlined),
+                            icon: Icon(Icons.clear_sharp),
                             color: Colors.white,
                             onPressed: () {
                               // Add your action here for the three dots

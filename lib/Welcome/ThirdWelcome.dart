@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:fitness/UserInformation/UserGender.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -78,7 +79,12 @@ class ThirdWelcomeState extends State<ThirdWelcome> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber.shade100,
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => UserGender()),
+                        );
+                      },
                       child: Text(
                         'N E X T',
                         style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold),

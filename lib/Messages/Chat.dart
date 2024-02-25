@@ -15,7 +15,14 @@ class _ChatPageState extends State<ChatPage> {
   final List<Message> messages = [
     Message(text: 'Hey There!', isSender: true), // Message 1
     Message(text: 'How are you?', isSender: true), // Message 2
-    Message(text: 'How was your day?', isSender: true),
+    Message(text: 'How was your day?', isSender: true), // Message 9
+
+    Message(text: 'Hello!', isSender: false),
+    Message(text: 'I am fine and how are you?', isSender: false), // Message 7
+    Message(text: 'Today was great!!!', isSender: false),
+    Message(text: 'I am doing well, Can we meet tomorrow?', isSender: true), // Message 9
+    Message(text: 'Yes Sure!', isSender: false), // Message 7
+    Message(text: 'At what time?', isSender: false),
   ];
 
   @override
@@ -40,7 +47,7 @@ class _ChatPageState extends State<ChatPage> {
                     child: MessageBubble(
                       message: message.text,
                       isSender: message.isSender,
-                      color: message.isSender ? Colors.amber.shade100 : Colors.grey,
+                      color: message.isSender ? Colors.amber.shade50 : Colors.grey,
                     ),
                   );
                 },

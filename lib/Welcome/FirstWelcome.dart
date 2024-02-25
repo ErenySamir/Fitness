@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:fitness/Welcome/SecWelcome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -95,7 +96,12 @@ class FirstWelcomeState extends State<FirstWelcome> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.amber.shade100,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SecWelcome()),
+                          );
+                        },
                         child: Text(
                           'G E T   S T A R T E D',
                           style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 24),

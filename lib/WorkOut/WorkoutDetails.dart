@@ -1,4 +1,5 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
+import 'package:fitness/WorkOut/AllWorkoutDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -361,7 +362,12 @@ class WorkoutDetailsState extends State<WorkoutDetails> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
                                   child: ElevatedButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => AllWorkoutDetails()),
+                                      );
+                                    },
                                     style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.amber.shade200,
                                     ),

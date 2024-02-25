@@ -1,4 +1,5 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
+import 'package:fitness/WorkOut/WorkoutSchedule.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -314,7 +315,12 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 10.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => WorkoutSchedule()),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.amber.shade100,
                       ),

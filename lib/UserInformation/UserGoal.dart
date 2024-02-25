@@ -1,3 +1,5 @@
+import 'package:fitness/UserInformation/ActivityLevel.dart';
+import 'package:fitness/UserInformation/UserGender.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -204,7 +206,12 @@ class UserGoalState extends State<UserGoal> {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xFF35383F),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => UserGender()),
+                            );
+                          },
                           child: Text(
                             'B A C K',
                             style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),
@@ -221,7 +228,12 @@ class UserGoalState extends State<UserGoal> {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.amber.shade100,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => ActivityLevel()),
+                            );
+                          },
                           child: Text(
                             'C O N T I N U E',
                             style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 22),

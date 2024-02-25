@@ -18,21 +18,25 @@ class _InputFieldState extends State<InputField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: EdgeInsets.all(2),
       color: Colors.white,
       child: Row(
         children: [
           Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30.0),
-                shape: BoxShape.rectangle
-              ),
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: TextField(
-                controller: _textEditingController,
-                decoration: InputDecoration.collapsed(
-                  hintText: 'Type your message here...',
+            child: SizedBox(
+              width: 10,
+              child: Container(
+                height: 20,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30.0),
+                  shape: BoxShape.rectangle
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 14),
+                child: TextField(
+                  controller: _textEditingController,
+                  decoration: InputDecoration.collapsed(
+                    hintText: 'Type your message here...',
+                  ),
                 ),
               ),
             ),

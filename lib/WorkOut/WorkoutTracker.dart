@@ -1,4 +1,5 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
+import 'package:fitness/WorkOut/WorkoutDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -82,8 +83,11 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                                       children: <Widget>[
                                         ElevatedButton(
                                           onPressed: () {
-                                            // Handle Check button press
-                                          },
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(builder: (context) => WorkoutDetails()),
+                                            );
+                                            },
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor:
                                                 Colors.amber.shade100,
