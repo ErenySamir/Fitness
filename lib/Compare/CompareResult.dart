@@ -1,3 +1,5 @@
+import 'package:fitness/Compare/Comparison.dart';
+import 'package:fitness/Profile/Home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +40,11 @@ class CompareResultState extends State<CompareResult> {
                           icon: Icon(Icons.navigate_before),
                           color: Colors.white,
                           onPressed: () {
-                            // Add your action here for the three dots
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Comparison()),
+                            );
                           },
                         ),
                       ),
@@ -74,7 +80,6 @@ class CompareResultState extends State<CompareResult> {
                         ),
                       ),
                     ),
-
                     Padding(
                       padding: const EdgeInsets.only(
                           top: 22.0, bottom: 22, right: 1, left: 1),
@@ -95,7 +100,6 @@ class CompareResultState extends State<CompareResult> {
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -114,7 +118,6 @@ class CompareResultState extends State<CompareResult> {
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-
                               SizedBox(
                                 height: 40,
                                 width: 130,
@@ -125,10 +128,12 @@ class CompareResultState extends State<CompareResult> {
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Colors.amber.shade100,
                                       ),
-                                      child: Text("Statistic",
-                                        style: TextStyle(color: Colors.black,
-                                            fontWeight: FontWeight.bold),)
-                                  ),
+                                      child: Text(
+                                        "Statistic",
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.bold),
+                                      )),
                                 ),
                               ),
                             ]),
@@ -151,14 +156,15 @@ class CompareResultState extends State<CompareResult> {
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [ Text(
-                            "May",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
+                          children: [
+                            Text(
+                              "May",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
                             Text(
                               "June",
                               style: TextStyle(
@@ -175,7 +181,8 @@ class CompareResultState extends State<CompareResult> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text("Lose Weight",
+                          Text(
+                            "Lose Weight",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,
@@ -203,7 +210,8 @@ class CompareResultState extends State<CompareResult> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text("Height Increase",
+                          Text(
+                            "Height Increase",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,
@@ -230,7 +238,8 @@ class CompareResultState extends State<CompareResult> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text("Muscle Mass Increase",
+                          Text(
+                            "Muscle Mass Increase",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,
@@ -257,7 +266,8 @@ class CompareResultState extends State<CompareResult> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text("Abs",
+                          Text(
+                            "Abs",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,
@@ -283,31 +293,39 @@ class CompareResultState extends State<CompareResult> {
 //*************
                     Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [ Padding(
-                          padding: const EdgeInsets.only(top: 315.0, bottom: 0),
-                          child: Center(
-                            child: SizedBox(
-                              height: 46,
-                              width: 178,
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 10.0),
-                                child: ElevatedButton(
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.amber.shade200,
-                                  ),
-                                  child: Text(
-                                    'Back to Home ',
-                                    style: TextStyle(color: Colors.black,
-                                        fontWeight: FontWeight.bold),
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(top: 315.0, bottom: 0),
+                            child: Center(
+                              child: SizedBox(
+                                height: 46,
+                                width: 178,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 10.0),
+                                  child: ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Home()),
+                                      );
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.amber.shade200,
+                                    ),
+                                    child: Text(
+                                      'Back to Home ',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
                         ]),
-
                   ],
                 ),
               ),

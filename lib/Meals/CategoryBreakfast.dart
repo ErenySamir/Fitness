@@ -1,3 +1,5 @@
+import 'package:fitness/Meals/MealPlanner.dart';
+import 'package:fitness/Meals/MealSchedule.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,8 +38,11 @@ class CategoryBreakfastState extends State<CategoryBreakfast> {
                       icon: Icon(Icons.navigate_before),
                       color: Colors.white,
                       onPressed: () {
-                        // Add your action here for the three dots
-                      },
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MealPlanner()),
+                        );                      },
                     ),
                   ),
                   Text(
@@ -136,12 +141,23 @@ class CategoryBreakfastState extends State<CategoryBreakfast> {
                                     'assets/images/slta.png',
                                   ),
                                 ),
-                                Text(
-                                  "Salad",
-                                  style: TextStyle(
-                                    color: Colors.black54,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => MealSchedule()),
+                                      );
+                                    });
+                                  },
+                                  child: Text(
+                                    "Salad",
+                                    style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -173,12 +189,23 @@ class CategoryBreakfastState extends State<CategoryBreakfast> {
                                     'assets/images/cake.png',
                                   ),
                                 ),
-                                Text(
-                                  "Cake",
-                                  style: TextStyle(
-                                    color: Colors.black54,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => MealSchedule()),
+                                      );
+                                    });
+                                  },
+                                  child: Text(
+                                    "Cake",
+                                    style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -209,12 +236,23 @@ class CategoryBreakfastState extends State<CategoryBreakfast> {
                                     'assets/images/pie.png',
                                   ),
                                 ),
-                                Text(
-                                  "Pie",
-                                  style: TextStyle(
-                                    color: Colors.black54,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => MealSchedule()),
+                                      );
+                                    });
+                                  },
+                                  child: Text(
+                                    "Pie",
+                                    style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -245,12 +283,23 @@ class CategoryBreakfastState extends State<CategoryBreakfast> {
                                     'assets/images/orange.png',
                                   ),
                                 ),
-                                Text(
-                                  "Orange",
-                                  style: TextStyle(
-                                    color: Colors.black54,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
+                                InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => MealSchedule()),
+                                      );
+                                    });
+                                  },
+                                  child: Text(
+                                    "Orange",
+                                    style: TextStyle(
+                                      color: Colors.black54,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                   ),
                                 ),
                               ],

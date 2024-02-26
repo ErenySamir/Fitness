@@ -1,3 +1,5 @@
+import 'package:fitness/Profile/Profile.dart';
+import 'package:fitness/Profile/ProfilePicture.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +15,7 @@ class ProfileEditState extends State<ProfileEdit> {
   int currentIndexx = 0;
 
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey.shade900,
@@ -39,8 +42,11 @@ class ProfileEditState extends State<ProfileEdit> {
                             icon: Icon(Icons.navigate_before),
                             color: Colors.white,
                             onPressed: () {
-                              // Add your action here for the three dots
-                            },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Profile()),
+                              );                            },
                           ),
                         ),
                         Expanded(
@@ -266,7 +272,13 @@ class ProfileEditState extends State<ProfileEdit> {
                           width: 283,
                           height: 40,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ProfilePicture()),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.amber.shade100,
                             ),

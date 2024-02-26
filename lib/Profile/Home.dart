@@ -1,6 +1,9 @@
+import 'package:fitness/Meals/MealSchedule.dart';
 import 'package:fitness/Messages/Chat.dart';
 import 'package:fitness/Profile/Discover.dart';
 import 'package:fitness/Profile/Notifications.dart';
+import 'package:fitness/Setting/SleepTracker.dart';
+import 'package:fitness/WorkOut/WorkoutTracker.dart';
 import 'package:flutter/material.dart';
 
 import 'Food.dart';
@@ -291,12 +294,23 @@ class HomeState extends State<Home> {
                         ), //SizedBox
                         Padding(
                           padding: const EdgeInsets.only(left: 0.0),
-                          child: const Text(
-                            "Today's  Workout",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold), //TextStyle
+                          child: InkWell(
+                            onTap: () {
+                              setState(() {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => WorkoutTracker()),
+                                );
+                              });
+                            },
+                            child: const Text(
+                              "Today's  Workout",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold), //TextStyle
+                            ),
                           ),
                         ), //Text
                         const SizedBox(height: 20),
@@ -304,7 +318,13 @@ class HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => WorkoutTracker()),
+                                );
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.amber.shade100,
                               ),
@@ -970,12 +990,32 @@ class HomeState extends State<Home> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mode_night_outlined),
+            icon: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SleepTracker()),
+                    );
+                  });
+                },
+                child: Icon(Icons.mode_night_outlined)),
             label: "",
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.lunch_dining_sharp),
+            icon: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MealSchedule()),
+                    );
+                  });
+                },
+                child: Icon(Icons.lunch_dining_sharp)),
             label: "",
             backgroundColor: Colors.black,
           ),

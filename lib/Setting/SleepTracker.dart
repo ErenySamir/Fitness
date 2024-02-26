@@ -1,3 +1,4 @@
+import 'package:fitness/Setting/Alarm.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -260,10 +261,21 @@ class SleepTrackerState extends State<SleepTracker> {
                                       width: 70,
                                       height: 70,
                                       color: Colors.amber.shade100,
-                                      child: Icon(
-                                        Icons.add,
-                                        size: 20,
-                                        color: Colors.black,
+                                      child: InkWell(
+                                        onTap: () {
+                                          setState(() {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) => AddAlarm()),
+                                            );
+                                          });
+                                        },
+                                        child: Icon(
+                                          Icons.add,
+                                          size: 20,
+                                          color: Colors.black,
+                                        ),
                                       ),
                                     ),
                                   ),

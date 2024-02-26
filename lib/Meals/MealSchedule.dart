@@ -1,3 +1,5 @@
+import 'package:fitness/Meals/CategoryBreakfast.dart';
+import 'package:fitness/Setting/SleepTracker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,8 +38,11 @@ class MealScheduleState extends State<MealSchedule> {
                       icon: Icon(Icons.navigate_before),
                       color: Colors.white,
                       onPressed: () {
-                        // Add your action here for the three dots
-                      },
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CategoryBreakfast()),
+                        );                      },
                     ),
                   ),
                   Text(
@@ -965,10 +970,21 @@ class MealScheduleState extends State<MealSchedule> {
                               width: 50,
                               height: 50,
                               color: Colors.amber.shade100,
-                              child: Icon(
-                                Icons.add,
-                                size: 20,
-                                color: Colors.black,
+                              child: InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => SleepTracker()),
+                                    );
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.add,
+                                  size: 20,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ),

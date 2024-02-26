@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Dialog/Dialog.dart';
+import 'WorkoutSchedule.dart';
 
 class OnClickSchedule extends StatefulWidget {
   @override
@@ -38,8 +39,12 @@ class WorkoutScheduleState extends State<OnClickSchedule> {
                       icon: Icon(Icons.navigate_before),
                       color: Colors.white,
                       onPressed: () {
-                        // Add your action here for the three dots
-                      },
+    Navigator.push(
+    context,
+    MaterialPageRoute(
+    builder: (context) => WorkoutSchedule()),
+    );
+                          },
                     ),
                   ),
                   Text(

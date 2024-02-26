@@ -1,3 +1,4 @@
+import 'package:fitness/Setting/Alarm.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -51,8 +52,11 @@ class AddWorkoutState extends State<AddWorkout> {
                             icon: Icon(Icons.clear_sharp),
                             color: Colors.white,
                             onPressed: () {
-                              // Add your action here for the three dots
-                            },
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AddAlarm()),
+                              );                            },
                           ),
                         ),
                         Text(

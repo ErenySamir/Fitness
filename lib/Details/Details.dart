@@ -1,3 +1,4 @@
+import 'package:fitness/Compare/Comparison.dart';
 import 'package:fitness/Congrat/Congratulations.dart';
 import 'package:fitness/WorkOut/WorkoutDetails.dart';
 import 'package:flutter/cupertino.dart';
@@ -248,7 +249,7 @@ class DetailsState extends State<Details> {
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => Congratulation()),
+                                MaterialPageRoute(builder: (context) => Comparison()),
                               );
                             },
                             child: Text(

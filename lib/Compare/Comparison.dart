@@ -1,3 +1,6 @@
+import 'package:fitness/Compare/CompareResult.dart';
+import 'package:fitness/Profile/Home.dart';
+import 'package:fitness/WorkOut/AllWorkoutDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +27,7 @@ class ComparisonState extends State<Comparison> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.all( 15.0),
+                      padding: const EdgeInsets.all(15.0),
                       child: Container(
                         width: 40.0,
                         height: 40.0,
@@ -37,7 +40,11 @@ class ComparisonState extends State<Comparison> {
                           icon: Icon(Icons.navigate_before),
                           color: Colors.white,
                           onPressed: () {
-                            // Add your action here for the three dots
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AllWorkoutDetails()),
+                            );
                           },
                         ),
                       ),
@@ -158,32 +165,40 @@ class ComparisonState extends State<Comparison> {
                       ),
                     ),
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children:[ Padding(
-                        padding: const EdgeInsets.only(top: 315.0,bottom: 0),
-                        child: Center(
-                          child: SizedBox(
-                            height: 46,
-                            width: 178,
-                            child: Padding(
-                              padding: const EdgeInsets.only(top: 10.0),
-                              child: ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.amber.shade200,
-                                ),
-                                child: Text(
-                                  'Compare ',
-                                  style: TextStyle(color: Colors.black,
-                                      fontWeight: FontWeight.bold),
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(top: 315.0, bottom: 0),
+                            child: Center(
+                              child: SizedBox(
+                                height: 46,
+                                width: 178,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 10.0),
+                                  child: ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => CompareResult()),
+                                      );
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.amber.shade200,
+                                    ),
+                                    child: Text(
+                                      'Compare ',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ),
-                    ]),
-
+                        ]),
                   ],
                 ),
               ),

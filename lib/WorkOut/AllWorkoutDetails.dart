@@ -1,4 +1,5 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
+import 'package:fitness/Details/Details.dart';
 import 'package:fitness/WorkOut/WorkoutSchedule.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -55,12 +56,23 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                           shape: BoxShape.rectangle,
                           color: Colors.grey.shade800,
                         ),
-                        child: IconButton(
-                          icon: Icon(Icons.clear_sharp),
-                          color: Colors.white,
-                          onPressed: () {
-                            // Add your action here for the three dots
+                        child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Details()),
+                              );
+                            });
                           },
+                          child: IconButton(
+                            icon: Icon(Icons.clear_sharp),
+                            color: Colors.white,
+                            onPressed: () {
+                              // Add your action here for the three dots
+                            },
+                          ),
                         ),
                       ),
 
@@ -72,12 +84,23 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                           shape: BoxShape.rectangle,
                           color: Colors.grey.shade800,
                         ),
-                        child: IconButton(
-                          icon: Icon(Icons.more_horiz),
-                          color: Colors.white,
-                          onPressed: () {
-                            toggleBottomSheet();
+                        child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Details()),
+                              );
+                            });
                           },
+                          child: IconButton(
+                            icon: Icon(Icons.more_horiz),
+                            color: Colors.white,
+                            onPressed: () {
+                              toggleBottomSheet();
+                            },
+                          ),
                         ),
                       ),
                     ],

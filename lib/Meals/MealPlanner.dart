@@ -1,5 +1,8 @@
+import 'package:fitness/Meals/CategoryBreakfast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../WorkOut/WorkoutSchedule.dart';
 
 class MealPlanner extends StatefulWidget {
   @override
@@ -39,8 +42,12 @@ class MealPlannerState extends State<MealPlanner> {
                         icon: Icon(Icons.navigate_before),
                         color: Colors.white,
                         onPressed: () {
-                          // Add your action here for the three dots
-                        },
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WorkoutSchedule()),
+                          );
+                          },
                       ),
                     ),
                     Text(
@@ -168,7 +175,13 @@ class MealPlannerState extends State<MealPlanner> {
                               Padding(
                                 padding: const EdgeInsets.only(right: 16),
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => CategoryBreakfast()),
+                                    );
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.amber.shade200,
                                   ),

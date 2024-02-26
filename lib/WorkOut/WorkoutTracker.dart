@@ -1,5 +1,7 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
+import 'package:fitness/Messages/Chat.dart';
 import 'package:fitness/WorkOut/WorkoutDetails.dart';
+import 'package:fitness/WorkOut/WorkoutSchedule.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -39,9 +41,16 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                Container(
-                  height: 370,
-                  color: Colors.black,
+                    Container(
+                      height: 370,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30),
+                          topRight: Radius.circular(30),
+
+                        ),),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -309,7 +318,13 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                                           Padding(
                                             padding: const EdgeInsets.only(top: 10.0),
                                             child: ElevatedButton(
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) => WorkoutSchedule()),
+                                                );
+                                              },
                                               style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.amber.shade100,
                                               ),
@@ -381,7 +396,13 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                                           Padding(
                                             padding: const EdgeInsets.only(top: 10.0),
                                             child: ElevatedButton(
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) => WorkoutSchedule()),
+                                                );
+                                              },
                                               style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.amber.shade100,
                                               ),
@@ -452,7 +473,13 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                                           Padding(
                                             padding: const EdgeInsets.only(top: 10.0),
                                             child: ElevatedButton(
-                                              onPressed: () {},
+                                              onPressed: () {
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) => WorkoutSchedule()),
+                                                );
+                                              },
                                               style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.amber.shade100,
                                               ),
@@ -516,7 +543,17 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                         color: Colors.grey,
                       ),
                       child: IconButton(
-                        icon: Icon(Icons.navigate_before),
+                        icon: InkWell(
+                              onTap: () {
+                                setState(() {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ChatPage()),
+                                  );
+                                });
+                              },
+                            child: Icon(Icons.navigate_before)),
                         color: Colors.white,
                         onPressed: () {
                           // Add your action here for the three dots
@@ -543,7 +580,7 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                         icon: Icon(Icons.more_horiz),
                         color: Colors.white,
                         onPressed: () {
-                          // Add your action here for the back arrow
+                          toggleBottomSheet();
                         },
                       ),
                     ),

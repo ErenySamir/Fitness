@@ -1,5 +1,6 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
 import 'package:fitness/WorkOut/AllWorkoutDetails.dart';
+import 'package:fitness/WorkOut/WorkoutTracker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -42,8 +43,14 @@ class WorkoutDetailsState extends State<WorkoutDetails> {
                 Container(
                   height: 1500,
                   width: 1000,
-                  color: Colors.black,
-                  child: Column(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30),
+
+                    ),),
+                    child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Padding(
@@ -1007,8 +1014,8 @@ class WorkoutDetailsState extends State<WorkoutDetails> {
         child: Stack(
           children: <Widget>[
             Container(
-              width: double.infinity,
-              height: 900,
+              width: 500,
+              height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/images/lady.png"),
@@ -1036,8 +1043,11 @@ class WorkoutDetailsState extends State<WorkoutDetails> {
                         icon: Icon(Icons.navigate_before),
                         color: Colors.white,
                         onPressed: () {
-                          // Add your action here for the back button
-                        },
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WorkoutTracker()),
+                          );                        },
                       ),
                     ),
                     Container(

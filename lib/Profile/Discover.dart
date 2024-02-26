@@ -1,5 +1,6 @@
 import 'package:fitness/Meals/MealPlanner.dart';
 import 'package:fitness/Profile/Notifications.dart';
+import 'package:fitness/Setting/Alarm.dart';
 import 'package:fitness/WorkOut/WorkoutTracker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -49,8 +50,11 @@ class DiscoverState extends State<Discover> {
                         icon: Icon(Icons.navigate_before),
                         color: Colors.white,
                         onPressed: () {
-                          // Add your action here for the three dots
-                        },
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Notifications()),
+                          );                             },
                       ),
                     ),
                   ),
@@ -153,7 +157,13 @@ class DiscoverState extends State<Discover> {
                         color: Color(0xFF35383F),
                       ),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AddAlarm()),
+                          );
+                        },
                         child: Text(
                           "Set Alarm",
                           style: TextStyle(

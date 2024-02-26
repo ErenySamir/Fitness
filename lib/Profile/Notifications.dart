@@ -33,25 +33,19 @@ class NotificationsState extends State<Notifications> {
                         shape: BoxShape.rectangle,
                         color: Color(0xFF35383F),
                       ),
-                      child: InkWell(
-                        onTap: () {
-                          setState(() {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Home()),
-                            );
-                          });
-                        },
+
                         child: IconButton(
                           icon: Icon(Icons.navigate_before),
                           color: Colors.white,
                           onPressed: () {
-                            // Add your action here for the three dots
-                          },
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Home()),
+                            );                               },
                         ),
                       ),
-                    ),
+
                     Text(
                       "Notification",
                       style: TextStyle(

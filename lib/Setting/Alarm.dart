@@ -1,5 +1,9 @@
+import 'package:fitness/Profile/ProfileEdit.dart';
+import 'package:fitness/WorkOut/AddWorkout.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../Profile/Profile.dart';
 
 class AddAlarm extends StatefulWidget {
   @override
@@ -35,11 +39,14 @@ class AddAlarmState extends State<AddAlarm> {
                                 color: Color(0xFF35383F),
                               ),
                               child: IconButton(
-                                icon: Icon(Icons.cancel_outlined),
+                                icon: Icon(Icons.navigate_before_sharp),
                                 color: Colors.white,
                                 onPressed: () {
-                                  // Add your action here for the three dots
-                                },
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => AddWorkout()),
+                                  );                                },
                               ),
                             ),
                             Text(
@@ -310,8 +317,11 @@ class AddAlarmState extends State<AddAlarm> {
                                           height: 40,
                                           child: ElevatedButton(
                                             onPressed: () {
-                                              // Handle Check button press
-                                            },
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) => Profile()),
+                                              );                                            },
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor:
                                               Colors.amber.shade100,

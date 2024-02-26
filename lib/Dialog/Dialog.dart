@@ -1,4 +1,7 @@
+import 'package:fitness/Meals/MealPlanner.dart';
 import 'package:flutter/material.dart';
+
+import '../WorkOut/WorkoutSchedule.dart';
 
 class CustomDialog extends StatelessWidget {
   @override
@@ -27,7 +30,16 @@ class CustomDialog extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.cancel_outlined,color: Colors.white,),
+
+                           IconButton(
+                             icon:Icon(Icons.clear_sharp,color: Colors.white,),
+                             onPressed: () {
+                               Navigator.push(
+                                 context,
+                                 MaterialPageRoute(
+                                     builder: (context) => WorkoutSchedule()),
+                               );
+                             },),
                       Text(
                         "Workout Schedule",
                         style: TextStyle(
@@ -76,8 +88,12 @@ class CustomDialog extends StatelessWidget {
                         backgroundColor: Colors.amber.shade100,
                       ),
                       onPressed: () {
-                        // Add your action here for the "Mark as Done" button
-                      },
+    Navigator.push(
+    context,
+    MaterialPageRoute(
+    builder: (context) => MealPlanner()),
+    );
+                          },
                       child: Text('Mark as Done',
                         style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 12),
 
@@ -87,8 +103,8 @@ class CustomDialog extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
+
+          )],
       ),
     );
   }

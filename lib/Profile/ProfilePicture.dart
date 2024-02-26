@@ -1,3 +1,4 @@
+import 'package:fitness/Profile/Home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -99,12 +100,23 @@ class ProfilePictureState extends State<ProfilePicture>{
                               color: Colors.black,
                               size: 20,
                             ),
-                            Text(
-                              "UPLOAD ",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
+                            InkWell(
+                              onTap: () {
+                                setState(() {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                          builder: (context) => Home()),
+                                  );
+                                });
+                              },
+                              child: Text(
+                                "UPLOAD ",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
 

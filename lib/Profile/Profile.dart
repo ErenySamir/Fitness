@@ -1,3 +1,5 @@
+import 'package:fitness/Profile/ProfileEdit.dart';
+import 'package:fitness/Setting/Alarm.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -38,8 +40,11 @@ class ProfileState extends State<Profile> {
                         icon: Icon(Icons.navigate_before),
                         color: Colors.white,
                         onPressed: () {
-                          // Add your action here for the three dots
-                        },
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AddAlarm()),
+                          );                        },
                       ),
                     ),
                     Text(
@@ -121,7 +126,13 @@ class ProfileState extends State<Profile> {
                                                 MainAxisAlignment.end,
                                             children: [
                                               ElevatedButton(
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) => ProfileEdit()),
+                                                  );
+                                                },
                                                 style: ElevatedButton.styleFrom(
                                                   backgroundColor:
                                                       Colors.amber.shade100,

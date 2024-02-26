@@ -1,3 +1,5 @@
+import 'package:fitness/WorkOut/OnClickSchedule.dart';
+import 'package:fitness/WorkOut/WorkoutDetails.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +38,11 @@ class WorkoutScheduleState extends State<WorkoutSchedule> {
                       icon: Icon(Icons.navigate_before),
                       color: Colors.white,
                       onPressed: () {
-                        // Add your action here for the three dots
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => WorkoutDetails() ),
+                        );
                       },
                     ),
                   ),
@@ -763,10 +769,21 @@ class WorkoutScheduleState extends State<WorkoutSchedule> {
                                                 width: 50,
                                                 height: 50,
                                                 color: Colors.amber.shade100,
-                                                child: Icon(
-                                                  Icons.add,
-                                                  size: 20,
-                                                  color: Colors.black,
+                                                child: InkWell(
+                                                  onTap: () {
+                                                    setState(() {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) => OnClickSchedule()),
+                                                      );
+                                                    });
+                                                  },
+                                                  child: Icon(
+                                                    Icons.add,
+                                                    size: 20,
+                                                    color: Colors.black,
+                                                  ),
                                                 ),
                                               ),
                                             ),

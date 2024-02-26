@@ -1,3 +1,4 @@
+import 'package:fitness/Welcome/FirstWelcome.dart';
 import 'package:flutter/material.dart';
 import 'LogIn.dart';
 
@@ -316,7 +317,13 @@ class UserRegisterState extends State<UserRegister> {
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.amber.shade100,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => FirstWelcome()),
+                                );
+                              },
                               child: Text(
                                 'Register',
                                 style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 16),
@@ -342,13 +349,24 @@ class UserRegisterState extends State<UserRegister> {
                               ),
                             ),
                           ),
-                          Text(
-                            ' Login ',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.amber.shade100,
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
+                          InkWell(
+                            onTap: () {
+                              setState(() {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => LogIn()),
+                                );
+                              });
+                            },
+                            child: Text(
+                              ' Login ',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.amber.shade100,
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                              ),
                             ),
                           ),
                         ]),
