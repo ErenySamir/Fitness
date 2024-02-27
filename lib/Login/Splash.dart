@@ -10,6 +10,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class SplashScreenState extends State<SplashScreen> {
+
+
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   @override
@@ -27,6 +29,9 @@ class SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    double screenWidth = screenSize.width;
+    double screenHeight = screenSize.height;
     return Navigator(
       key: navigatorKey,
       onGenerateRoute: (_) => MaterialPageRoute(
@@ -34,12 +39,14 @@ class SplashScreenState extends State<SplashScreen> {
           child: Scaffold(
             backgroundColor: Colors.black,
             body: Center(
-              child: Image.asset(
-                'assets/images/splach.png',
-                fit: BoxFit.cover,
-                height: double.infinity,
-                width: double.infinity,
-                alignment: Alignment.center,
+              child: Container(
+                child: Image.asset(
+                  'assets/images/splach.png',
+                  fit: BoxFit.cover,
+                  height: screenHeight,
+                  width: screenWidth,
+                  alignment: Alignment.center,
+                ),
               ),
             ),
           ),

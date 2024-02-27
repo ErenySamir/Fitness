@@ -17,6 +17,7 @@ class FirstWelcomeState extends State<FirstWelcome> {
         child: Stack(
           children: <Widget>[
             Container(
+
               alignment: Alignment.center,
               child: Image.asset(
                 'assets/images/fit.jpg',

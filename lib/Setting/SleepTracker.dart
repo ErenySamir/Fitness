@@ -1,6 +1,11 @@
 import 'package:fitness/Setting/Alarm.dart';
+import 'package:fitness/WorkOut/AddWorkout.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../Meals/MealPlanner.dart';
+import '../Profile/Home.dart';
+import '../WorkOut/WorkoutTracker.dart';
 
 class SleepTracker extends StatefulWidget {
   @override
@@ -40,8 +45,14 @@ class SleepTrackerState extends State<SleepTracker> {
                             icon: Icon(Icons.navigate_before),
                             color: Colors.white,
                             onPressed: () {
-                              // Add your action here for the three dots
-                            },
+
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => AddWorkout()),
+                                  );
+
+                              },
                           ),
                         ),
                         Text(
@@ -288,36 +299,76 @@ class SleepTrackerState extends State<SleepTracker> {
             )
         ),
       bottomNavigationBar: BottomNavigationBar(
-      backgroundColor: Colors.black,
-      currentIndex: currentIndexx,
-      onTap: (index) {
-        setState(() {
-          currentIndexx = index;
-        });
-      },
-      items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: "",
-          backgroundColor: Colors.black,
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.fitness_center_sharp),
-          label: "",
-          backgroundColor: Colors.black,
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.mode_night_outlined,color: Colors.amber.shade100,),
-          label: "",
-          backgroundColor: Colors.black,
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.lunch_dining_sharp),
-          label: "",
-          backgroundColor: Colors.black,
-        ),
-      ],
-    ),
+        backgroundColor: Colors.black,
+        currentIndex: currentIndexx,
+        onTap: (index) {
+          setState(() {
+            currentIndexx = index;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Home()),
+                    );
+                  });
+                },
+                child: Icon(Icons.home)),
+            label: "",
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => WorkoutTracker()),
+                    );
+                  });
+                },
+                child: Icon(Icons.fitness_center_sharp)),
+            label: "",
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SleepTracker()),
+                    );
+                  });
+                },
+                child: Icon(Icons.mode_night_outlined,color: Colors.amber.shade100,)),
+            label: "",
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MealPlanner()),
+                    );
+                  });
+                },
+                child: Icon(Icons.lunch_dining_sharp)),
+            label: "",
+            backgroundColor: Colors.black,
+          ),
+        ],
+      ),
 
     );
   }

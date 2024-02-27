@@ -1,3 +1,4 @@
+import 'package:fitness/Meals/MealPlanner.dart';
 import 'package:fitness/Meals/MealSchedule.dart';
 import 'package:fitness/Messages/Chat.dart';
 import 'package:fitness/Profile/Discover.dart';
@@ -980,12 +981,32 @@ class HomeState extends State<Home> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Home()),
+                    );
+                  });
+                },
+                child: Icon(Icons.home,color: Colors.amber.shade100,)),
             label: "",
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.fitness_center_sharp),
+            icon: InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => WorkoutTracker()),
+                    );
+                  });
+                },
+                child: Icon(Icons.fitness_center_sharp)),
             label: "",
             backgroundColor: Colors.black,
           ),
@@ -1011,7 +1032,7 @@ class HomeState extends State<Home> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => MealSchedule()),
+                          builder: (context) => MealPlanner()),
                     );
                   });
                 },
