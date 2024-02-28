@@ -38,11 +38,9 @@ class NotificationsState extends State<Notifications> {
                           icon: Icon(Icons.navigate_before),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Home()),
-                            );                               },
+                            Navigator.of(context).pop(); // Navigate back to the previous page
+
+                          },
                         ),
                       ),
 

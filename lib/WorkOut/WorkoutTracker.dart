@@ -547,23 +547,13 @@ class WorkoutTrackerState extends State<WorkoutTracker> {
                         color: Colors.grey,
                       ),
                       child: IconButton(
-                        icon: InkWell(
-                              onTap: () {
-                                setState(() {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => ChatPage()),
-                                  );
-                                });
-                              },
-                            child: Icon(Icons.navigate_before)),
-                        color: Colors.white,
+                        icon:  Icon(Icons.navigate_before,
+                          color: Colors.white,
+                        ),
                         onPressed: () {
-                          // Add your action here for the three dots
-                        },
+                          Navigator.of(context).pop(); // Navigate back to the previous page
+                        },),
                       ),
-                    ),
                     Text(
                       "Workout Tracker",
                       style: TextStyle(

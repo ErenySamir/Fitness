@@ -38,11 +38,8 @@ class MealScheduleState extends State<MealSchedule> {
                       icon: Icon(Icons.navigate_before),
                       color: Colors.white,
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CategoryBreakfast()),
-                        );                      },
+                        Navigator.of(context).pop(); // Navigate back to the previous page
+                      },
                     ),
                   ),
                   Text(

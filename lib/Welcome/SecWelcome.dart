@@ -13,42 +13,28 @@ class SecWelcomeState extends State<SecWelcome> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
+      body: SafeArea(
         child: Stack(
           children: <Widget>[
-            Container(
-              alignment: Alignment.center,
-              child: Image.asset(
-                'assets/images/sec.jpg',
-                fit: BoxFit.cover,
-                height: double.infinity,
-                width: double.infinity,
-                alignment: Alignment.center,
-              ),
+            Image.asset(
+              'assets/images/sec.jpg',
+              fit: BoxFit.cover,
+              height: double.infinity,
+              width: double.infinity,
             ),
             Positioned(
-              top: 600,
-              child: SizedBox(
-                width: 273,
-                height: 50,
-                child: Center(
-                  child: Text(
+              top: 560,
+              child: Column(
+                children: <Widget>[
+                  Text(
                     'WELCOME TO',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 40.0,
                     ),
                   ),
-                ),
-              ),
-            ),
-            Positioned(
-              top: 630,
-              child: SizedBox(
-                width: 273,
-                height: 94,
-                child: Center(
-                  child: Text(
+
+                  Text(
                     'HEALTHIFY',
                     style: TextStyle(
                       color: Colors.amber.shade100,
@@ -56,21 +42,23 @@ class SecWelcomeState extends State<SecWelcome> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
+                ],
               ),
             ),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 640, right: 20, left: 20),
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        'This app provides an interactive '
-                            'experience, allowing you to log completed '
-                            'workouts, track your progress,'
-                            ' and celebrate  your achievements..',
+            Positioned(
+              top: 680,
+              left: 5,
+              right: 20,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Text(
+                        'This app provides an interactive experience, '
+                            'allowing you to log completed workouts, '
+                            'track your progress, and celebrate your achievements.',
                         textAlign: TextAlign.start,
                         style: TextStyle(
                           color: Colors.white,
@@ -78,33 +66,33 @@ class SecWelcomeState extends State<SecWelcome> {
                           fontWeight: FontWeight.normal,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                child: SizedBox(
-                  width: 351,
-                  height: 76,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.amber.shade100,
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => ThirdWelcome()),
-                        );
-                      },
-                      child: Text(
-                        'NEXT',
-                        style: TextStyle(color: Colors.black,fontSize: 22,fontWeight: FontWeight.bold),
-                      ),
+            Positioned(
+              bottom: 20,
+              left: 40,
+              right: 40,
+              child: SizedBox(
+                height: 60,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.amber.shade100,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ThirdWelcome()),
+                    );
+                  },
+                  child: Text(
+                    'NEXT',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),

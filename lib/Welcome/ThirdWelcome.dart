@@ -28,10 +28,8 @@ class ThirdWelcomeState extends State<ThirdWelcome> {
             ),
 
             Positioned(
-              top: 550,
+              top: 630,
               child: SizedBox(
-                width: 197,
-                height: 51,
                 child: Center(
                       child: Text(
                         'Training',
@@ -46,23 +44,27 @@ class ThirdWelcomeState extends State<ThirdWelcome> {
               ),
             ),
             Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 500,left: 50,right: 50),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'Workout plans designed to help you '
-                          'achieve your fitness goals '
-                          '- whether losing weight or building muscles',
-                      textAlign: TextAlign.start,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal,
+              child: Positioned(
+                left: 5,
+                right: 20,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 690,left: 50,right: 50),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Workout plans designed to help you '
+                            'achieve your fitness goals '
+                            '- whether losing weight or building muscles',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.normal,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

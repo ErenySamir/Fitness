@@ -38,11 +38,8 @@ class CategoryBreakfastState extends State<CategoryBreakfast> {
                       icon: Icon(Icons.navigate_before),
                       color: Colors.white,
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MealPlanner()),
-                        );                      },
+                        Navigator.of(context).pop(); // Navigate back to the previous page
+                      },
                     ),
                   ),
                   Text(

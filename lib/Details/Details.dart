@@ -35,23 +35,13 @@ class DetailsState extends State<Details> {
                           shape: BoxShape.rectangle,
                           color: Colors.grey,
                         ),
-                        child: InkWell(
-                          onTap: () {
-                            setState(() {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => WorkoutDetails()),
-                              );
-                            });
-                          },
-                          child: IconButton(
+                        child: IconButton(
                             icon: Icon(Icons.navigate_before),
                             color: Colors.white,
                             onPressed: () {
-                              // Add your action here for the three dots
+                              Navigator.of(context).pop(); // Navigate back to the previous page
                             },
-                          ),
+
                         ),
                       ),
                       Text(

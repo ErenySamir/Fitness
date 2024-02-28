@@ -42,11 +42,8 @@ class AddAlarmState extends State<AddAlarm> {
                                 icon: Icon(Icons.navigate_before_sharp),
                                 color: Colors.white,
                                 onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => AddWorkout()),
-                                  );                                },
+                                  Navigator.of(context).pop(); // Navigate back to the previous page
+                                },
                               ),
                             ),
                             Text(

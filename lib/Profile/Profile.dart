@@ -40,11 +40,8 @@ class ProfileState extends State<Profile> {
                         icon: Icon(Icons.navigate_before),
                         color: Colors.white,
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => AddAlarm()),
-                          );                        },
+                          Navigator.of(context).pop(); // Navigate back to the previous page
+                        },
                       ),
                     ),
                     Text(

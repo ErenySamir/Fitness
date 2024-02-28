@@ -26,12 +26,9 @@ class UserProfile extends StatelessWidget {
               ),
               child: IconButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Discover()),
-                  );
-                  },
+                  Navigator.of(context).pop(); // Navigate back to the previous page
+
+                },
                 icon: Icon(Icons.navigate_before),
                 color: Colors.white,
               ),

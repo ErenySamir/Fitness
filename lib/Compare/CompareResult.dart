@@ -40,11 +40,7 @@ class CompareResultState extends State<CompareResult> {
                           icon: Icon(Icons.navigate_before),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Comparison()),
-                            );
+                            Navigator.of(context).pop(); // Navigate back to the previous page
                           },
                         ),
                       ),
