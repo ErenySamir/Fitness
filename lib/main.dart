@@ -36,7 +36,7 @@ void main() {
   runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:WorkoutTracker(),
+        home:SplashScreen(),
       )
   );
 }

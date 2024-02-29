@@ -1,4 +1,5 @@
 import 'package:bottom_sheet/bottom_sheet.dart';
+import 'package:fitness/Congrat/Congratulations.dart';
 import 'package:fitness/Details/Details.dart';
 import 'package:fitness/WorkOut/WorkoutSchedule.dart';
 import 'package:flutter/cupertino.dart';
@@ -90,7 +91,7 @@ class AllWorkoutDetailsState extends State<AllWorkoutDetails> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Details()),
+                                    builder: (context) => Congratulation()),
                               );
                             });
                           },

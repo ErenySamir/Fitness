@@ -493,10 +493,18 @@ class WorkoutDetailsState extends State<WorkoutDetails> {
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Icon(
-                                  Icons.navigate_next,
-                                  color: Colors.amber.shade100,
-                                  size: 20.0,
+                                child: InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      Navigator.of(context).pop(); // Navigate back to the previous page
+
+                                    });
+                                  },
+                                  child: Icon(
+                                    Icons.navigate_next,
+                                    color: Colors.amber.shade100,
+                                    size: 20.0,
+                                  ),
                                 ),
                               ),
                             ),
@@ -1043,11 +1051,9 @@ class WorkoutDetailsState extends State<WorkoutDetails> {
                         icon: Icon(Icons.navigate_before),
                         color: Colors.white,
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => WorkoutTracker()),
-                          );                        },
+
+                              Navigator.of(context).pop(); // Navigate back to the previous page
+                        },
                       ),
                     ),
                     Container(

@@ -5,6 +5,8 @@ import 'package:fitness/WorkOut/WorkoutTracker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Profile.dart';
+
 class Discover extends StatefulWidget {
   @override
   State<Discover> createState() {
@@ -39,10 +41,8 @@ class DiscoverState extends State<Discover> {
                     child: InkWell(
                       onTap: () {
                         setState(() {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Notifications()),
+                          MaterialPageRoute(
+                          builder: (context) => Profile()
                           );
                         });
                       },

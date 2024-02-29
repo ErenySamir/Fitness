@@ -30,23 +30,26 @@ class ProfileEditState extends State<ProfileEdit> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          width: 40.0,
-                          height: 40.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            shape: BoxShape.rectangle,
-                            color: Color(0xFF35383F),
-                          ),
-                          child: IconButton(
-                            icon: Icon(Icons.navigate_before),
-                            color: Colors.white,
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Profile()),
-                              );                            },
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 40.0,
+                            height: 40.0,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              shape: BoxShape.rectangle,
+                              color: Color(0xFF35383F),
+                            ),
+                            child: IconButton(
+                              icon: Icon(Icons.navigate_before),
+                              color: Colors.white,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Profile()),
+                                );                            },
+                            ),
                           ),
                         ),
                         Expanded(

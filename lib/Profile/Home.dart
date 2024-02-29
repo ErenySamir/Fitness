@@ -1,3 +1,4 @@
+import 'package:fitness/Details/Details.dart';
 import 'package:fitness/Meals/MealPlanner.dart';
 import 'package:fitness/Meals/MealSchedule.dart';
 import 'package:fitness/Messages/Chat.dart';
@@ -228,7 +229,13 @@ class HomeState extends State<Home> {
                                 ), //Text
                                 SizedBox(),
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Details()),
+                                    );
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.amber.shade200,
                                   ),
@@ -725,7 +732,13 @@ class HomeState extends State<Home> {
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => WorkoutTracker()),
+                                    );
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.amber.shade100,
                                   ),
