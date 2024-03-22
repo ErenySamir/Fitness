@@ -10,6 +10,15 @@ class Notifications extends StatefulWidget {
 }
 
 class NotificationsState extends State<Notifications> {
+
+  List<bool> isSelectedList = List.generate(8, (index) => false);
+
+  void toggleSelection(int index) {
+    setState(() {
+      isSelectedList[index] = !isSelectedList[index];
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,15 +124,17 @@ class NotificationsState extends State<Notifications> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.check_box_outlined,
-                              color: Colors.grey,
-                              size: 20.0,
-                              // ),
-                            ),
+                      GestureDetector(
+                        onTap: () => toggleSelection(0), // Pass the index of the icon
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(
+                            isSelectedList[0] ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+                            color: Colors.grey,
+                            size: 20.0,
                           ),
+                        ),
+                      )
                         ],
                       ),
                     ),
@@ -170,15 +181,17 @@ class NotificationsState extends State<Notifications> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.check_box_outline_blank,
-                              color: Colors.grey,
-                              size: 20.0,
-                              // ),
+                          GestureDetector(
+                            onTap: () => toggleSelection(1), // Pass the index of the icon
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                isSelectedList[1] ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+                                color: Colors.grey,
+                                size: 20.0,
+                              ),
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
@@ -217,15 +230,17 @@ class NotificationsState extends State<Notifications> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.check_box_outlined,
-                              color: Colors.grey,
-                              size: 20.0,
-                              // ),
+                          GestureDetector(
+                            onTap: () => toggleSelection(2), // Pass the index of the icon
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                isSelectedList[2] ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+                                color: Colors.grey,
+                                size: 20.0,
+                              ),
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
@@ -272,15 +287,17 @@ class NotificationsState extends State<Notifications> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.check_box_outlined,
-                              color: Colors.grey,
-                              size: 20.0,
-                              // ),
+                          GestureDetector(
+                            onTap: () => toggleSelection(3), // Pass the index of the icon
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                isSelectedList[3] ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+                                color: Colors.grey,
+                                size: 20.0,
+                              ),
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
@@ -327,15 +344,17 @@ class NotificationsState extends State<Notifications> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.check_box_outline_blank,
-                              color: Colors.grey,
-                              size: 20.0,
-                              // ),
+                          GestureDetector(
+                            onTap: () => toggleSelection(4), // Pass the index of the icon
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                isSelectedList[4] ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+                                color: Colors.grey,
+                                size: 20.0,
+                              ),
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
@@ -382,15 +401,17 @@ class NotificationsState extends State<Notifications> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.check_box_outline_blank,
-                              color: Colors.grey,
-                              size: 20.0,
-                              // ),
+                          GestureDetector(
+                            onTap: () => toggleSelection(5), // Pass the index of the icon
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                isSelectedList[5] ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+                                color: Colors.grey,
+                                size: 20.0,
+                              ),
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
@@ -437,15 +458,17 @@ class NotificationsState extends State<Notifications> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.check_box_outline_blank,
-                              color: Colors.grey,
-                              size: 20.0,
-                              // ),
+                          GestureDetector(
+                            onTap: () => toggleSelection(6), // Pass the index of the icon
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                isSelectedList[6] ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+                                color: Colors.grey,
+                                size: 20.0,
+                              ),
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
@@ -484,15 +507,17 @@ class NotificationsState extends State<Notifications> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.check_box_outline_blank,
-                              color: Colors.grey,
-                              size: 20.0,
-                              // ),
+                          GestureDetector(
+                            onTap: () => toggleSelection(7), // Pass the index of the icon
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Icon(
+                                isSelectedList[7] ? Icons.check_box_outlined : Icons.check_box_outline_blank,
+                                color: Colors.grey,
+                                size: 20.0,
+                              ),
                             ),
-                          ),
+                          )
                         ],
                       ),
                     ),
