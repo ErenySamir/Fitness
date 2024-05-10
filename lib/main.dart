@@ -6,6 +6,7 @@ import 'package:fitness/Meals/CategoryBreakfast.dart';
 import 'package:fitness/Meals/MealPlanner.dart';
 import 'package:fitness/Meals/MealSchedule.dart';
 import 'package:fitness/Messages/Chat.dart';
+import 'package:fitness/Profile/DietTybe.dart';
 import 'package:fitness/Profile/Home.dart';
 import 'package:fitness/Login/LogIn.dart';
 import 'package:fitness/Login/Register.dart';
@@ -36,7 +37,7 @@ void main() {
   runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:WorkoutTracker(),
+        home:DietTybes(),
       )
   );
 }
